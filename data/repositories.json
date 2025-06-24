@@ -1,0 +1,112 @@
+{
+  "repositories": [
+    {
+      "name": "ComfyUI-RMBG",
+      "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet...",
+      "stars": 1081,
+      "forks": 44,
+      "language": "Python",
+      "topics": ["image-processing", "background-removal", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-RMBG",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-RMBG",
+      "category": "image",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-OmniGen",
+      "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
+      "stars": 275,
+      "forks": 22,
+      "language": "Python",
+      "topics": ["text-to-image", "omnigen", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-OmniGen",
+      "has_pages": false,
+      "pages_url": null,
+      "category": "ai",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-SparkTTS",
+      "description": "Advanced text-to-speech system leveraging large language models for natural speech generation.",
+      "stars": 89,
+      "forks": 12,
+      "language": "Python",
+      "topics": ["tts", "text-to-speech", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-SparkTTS",
+      "has_pages": false,
+      "pages_url": null,
+      "category": "audio",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "news": [
+    {
+      "title": "ComfyUI-RMBG Major Update",
+      "description": "New models and improved performance for background removal tasks.",
+      "date": "2024-12-20",
+      "type": "update",
+      "url": "https://github.com/1038lab/ComfyUI-RMBG"
+    },
+    {
+      "title": "New AI Model Integration",
+      "description": "We've integrated cutting-edge AI models across our ComfyUI ecosystem for enhanced performance.",
+      "date": "2024-12-15",
+      "type": "announcement",
+      "url": "https://github.com/1038lab"
+    },
+    {
+      "title": "Community Milestone",
+      "description": "Our projects have reached over 1,000 stars! Thank you for your continued support.",
+      "date": "2024-12-10",
+      "type": "milestone",
+      "url": "https://github.com/1038lab"
+    }
+  ],
+  "config": {
+    "hiddenRepositories": [
+      ".github",
+      "ComfyUI-Manager"
+    ],
+    "categories": {
+      "ai": {
+        "name": "AI",
+        "description": "Artificial intelligence and machine learning tools",
+        "color": "purple"
+      },
+      "image": {
+        "name": "Image",
+        "description": "Image processing and computer vision",
+        "color": "green"
+      },
+      "audio": {
+        "name": "Audio",
+        "description": "Audio processing and speech technologies",
+        "color": "blue"
+      },
+      "text": {
+        "name": "Text",
+        "description": "Natural language processing and text analysis",
+        "color": "indigo"
+      },
+      "workflow": {
+        "name": "Workflow",
+        "description": "Automation and workflow management tools",
+        "color": "pink"
+      },
+      "web": {
+        "name": "Web",
+        "description": "Website development and tools",
+        "color": "orange"
+      }
+    },
+    "contact": {
+      "email": "contact@1038lab.com",
+      "github": "https://github.com/1038lab",
+      "sponsors": "https://github.com/sponsors/1038lab"
+    }
+  }
+}
