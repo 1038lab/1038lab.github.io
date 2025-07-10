@@ -43,12 +43,10 @@ async function fetchGitHubRepos() {
         console.error('Error fetching GitHub repos:', error);
         console.log('Falling back to GitHub API for local testing');
 
-        // For local testing, try to fetch from GitHub API directly
         try {
-            const apiResponse = await fetch('https://api.github.com/orgs/1038lab/repos?per_page=100&sort=stars&direction=desc');
-            if (apiResponse.ok) {
-                const repos = await apiResponse.json();
-                console.log(`Loaded ${repos.length} repositories from GitHub API`);
+            const response = await fetch('https://api.github.com/orgs/1038lab/repos?per_page=100');
+            if (response.ok) {
+                const repos = await response.json();
 
                 // Process the API data to match our format
                 return repos
@@ -72,58 +70,59 @@ async function fetchGitHubRepos() {
             console.error('GitHub API also failed:', apiError);
         }
 
-        // Final fallback - minimal static data
-        console.log('Using minimal fallback data');
-        return [
-            {
-                name: "ComfyUI-RMBG",
-                description: "Background removal ComfyUI node",
-                stars: 1081,
-                forks: 44,
-                language: "Python",
-                topics: ["comfyui", "ai"],
-                url: "https://github.com/1038lab/ComfyUI-RMBG",
-                has_pages: true,
-                pages_url: "https://1038lab.github.io/ComfyUI-RMBG",
-                category: "ai",
-                featured: true,
-                image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-            }
-        ];
+        return [];
     }
 }
 
-// Categorize repository based on name and topics (only used for dynamic categorization)
+// Categorize repository based on name and topics
 function categorizeRepo(name, topics) {
-    const nameUpper = name.toUpperCase();
+    const nameAndTopics = (name + ' ' + topics.join(' ')).toLowerCase();
 
-    if (topics.includes('tts') || nameUpper.includes('TTS')) return 'tts';
-    if (topics.includes('image-processing') || nameUpper.includes('RMBG') || nameUpper.includes('LBM') || nameUpper.includes('REMOVER')) return 'image';
-    if (nameUpper.includes('GITHUB.IO') || topics.includes('website')) return 'web';
-    return 'ai';
+    if (nameAndTopics.includes('tts') || nameAndTopics.includes('text-to-speech') ||
+        nameAndTopics.includes('sparktts') || nameAndTopics.includes('edgetts') ||
+        nameAndTopics.includes('megatts') || nameAndTopics.includes('kokoro')) {
+        return 'tts';
+    }
+    if (nameAndTopics.includes('image') || nameAndTopics.includes('rmbg') ||
+        nameAndTopics.includes('background') || nameAndTopics.includes('lbm') ||
+        nameAndTopics.includes('minimax') || nameAndTopics.includes('captioning') ||
+        nameAndTopics.includes('img2txt') || nameAndTopics.includes('blip')) {
+        return 'image';
+    }
+    if (nameAndTopics.includes('web') || nameAndTopics.includes('website') ||
+        nameAndTopics.includes('github-pages')) {
+        return 'web';
+    }
+    return 'ai'; // Default category for ComfyUI and other AI projects
 }
 
-// Generate unique image for each repository (for fallback only)
+// Generate unique image for each repository
 function generateUniqueImage(repoName) {
-    // Different image IDs for variety
-    const imageIds = [
-        '1620712943543-bcc4688e7485',
-        '1677442136019-21780ecad995',
-        '1485827404703-89b55fcc595e',
-        '1589254065878-42c9da997008',
-        '1507003211169-0a1dd7228f2d',
-        '1516280440614-37939bbacd81',
-        '1555949963-aa79dcee981c',
-        '1558618666-fcd25c85cd64',
-        '1551288049-bebda4e38f71',
-        '1460925895917-afdab827c52f'
-    ];
+    // Create a simple hash from the repo name
+    let hash = 0;
+    for (let i = 0; i < repoName.length; i++) {
+        const char = repoName.charCodeAt(i);
+        hash = ((hash << 5) - hash) + char;
+        hash = hash & hash; // Convert to 32-bit integer
+    }
 
-    // Use repo name to consistently pick same image
-    const hash = repoName.split('').reduce((a, b) => {
-        a = ((a << 5) - a) + b.charCodeAt(0);
-        return a & a;
-    }, 0);
+    // Array of different Unsplash image IDs for variety
+    const imageIds = [
+        '1555949963-aa79dcee981c', // AI/Tech
+        '1620712943543-bcc4688e7485', // Digital art
+        '1589254065878-42c9da997008', // Audio/Sound
+        '1677442136019-21780ecad995', // Neural networks
+        '1507003211169-0a1dd7228f2d', // Voice/Speech
+        '1558618666-fcd25c85cd64', // Lighting
+        '1516280440614-37939bbacd81', // Audio waves
+        '1485827404703-89b55fcc595e', // Code/Programming
+        '1611162617474-5b21e879e113', // Video/Media
+        '1460925895917-afdab827c52f', // Web development
+        '1518709268805-4e9042af9f23', // Machine learning
+        '1451187580459-43d4b3f05c65', // Data visualization
+        '1504639725590-34d0984388bd', // Technology
+        '1526374965343-dd52b1852190'  // Innovation
+    ];
 
     const imageId = imageIds[Math.abs(hash) % imageIds.length];
     return `https://images.unsplash.com/photo-${imageId}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`;
@@ -131,13 +130,12 @@ function generateUniqueImage(repoName) {
 
 // DOM elements
 const projectsGrid = document.getElementById('projects-grid');
-const newsGrid = document.getElementById('news-grid');
 const searchInput = document.getElementById('search');
+const filterButtons = document.querySelectorAll('.filter-btn');
 
 // State
 let currentFilter = 'all';
 let searchTerm = '';
-let currentSort = 'stars';
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', async function () {
@@ -150,11 +148,10 @@ document.addEventListener('DOMContentLoaded', async function () {
     // Load repositories from GitHub API
     repositories = await fetchGitHubRepos();
 
-    // Ensure all repositories have categories assigned
+    // Ensure all repositories have categories assigned and recategorize if needed
     repositories = repositories.map(repo => {
-        if (!repo.category) {
-            repo.category = categorizeRepo(repo.name, repo.topics || []);
-        }
+        // Always recategorize based on name and topics for consistency
+        repo.category = categorizeRepo(repo.name, repo.topics || []);
         return repo;
     });
 
@@ -165,23 +162,20 @@ document.addEventListener('DOMContentLoaded', async function () {
 
     // Render projects and setup
     renderProjects();
-    renderNews();
-    updateFilterButtons();
     setupEventListeners();
     setupScrollEffects();
 });
 
-// Show loading state while fetching data
+// Show loading state
 function showLoadingState() {
-    const projectsGrid = document.getElementById('projects-grid');
-    projectsGrid.innerHTML = `
-        <div class="col-span-full flex justify-center items-center py-12">
-            <div class="text-center">
+    if (projectsGrid) {
+        projectsGrid.innerHTML = `
+            <div class="col-span-full text-center py-12">
                 <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
                 <p class="text-gray-600">Loading projects...</p>
             </div>
-        </div>
-    `;
+        `;
+    }
 }
 
 // Update hero section stats with real data
@@ -209,98 +203,71 @@ function updateHeroStats() {
 
 // Render projects
 function renderProjects() {
-    console.log(`Rendering projects. Total repositories: ${repositories.length}, Current filter: ${currentFilter}`);
-
-    if (!projectsGrid) {
-        console.error('Projects grid element not found!');
-        return;
-    }
-
-    let filteredRepos = repositories.filter(repo => {
+    const filteredRepos = repositories.filter(repo => {
         const matchesFilter = currentFilter === 'all' || repo.category === currentFilter;
         const matchesSearch = repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             repo.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            (repo.topics && repo.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase())));
+            repo.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase()));
         return matchesFilter && matchesSearch;
-    });
-
-    console.log(`Filtered repositories: ${filteredRepos.length}`);
-
-    // Sort repositories
-    filteredRepos.sort((a, b) => {
-        switch (currentSort) {
-            case 'stars':
-                return b.stars - a.stars;
-            case 'name':
-                return a.name.localeCompare(b.name);
-            case 'updated':
-                return new Date(b.updated_at || 0) - new Date(a.updated_at || 0);
-            default:
-                return b.stars - a.stars;
-        }
     });
 
     if (filteredRepos.length === 0) {
         projectsGrid.innerHTML = `
             <div class="col-span-full text-center py-12">
-                <div class="text-gray-500 text-lg">No projects found matching your criteria.</div>
-                <p class="text-gray-400 mt-2">Try adjusting your search or filter settings.</p>
+                <div class="text-gray-400 text-6xl mb-4">🔍</div>
+                <h3 class="text-xl font-semibold text-gray-900 mb-2">No projects found</h3>
+                <p class="text-gray-600">Try adjusting your search or filter criteria.</p>
             </div>
         `;
         return;
     }
 
     projectsGrid.innerHTML = filteredRepos.map(repo => `
-        <div class="project-card bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-            <div class="relative h-48 overflow-hidden">
+        <div class="project-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1" data-category="${repo.category}">
+            <div class="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
                 <img src="${repo.image}" alt="${repo.name}" class="w-full h-full object-cover">
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div class="absolute top-4 left-4">
-                    <span class="px-3 py-1 bg-primary-600 text-white text-xs font-medium rounded-full">
-                        ${getCategoryDisplayName(repo.category)}
+                <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                <div class="absolute top-4 right-4">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/90 text-gray-800">
+                        ${repo.language}
                     </span>
                 </div>
-                ${repo.featured ? '<div class="absolute top-4 right-4"><span class="px-2 py-1 bg-yellow-500 text-white text-xs font-bold rounded">FEATURED</span></div>' : ''}
             </div>
             <div class="p-6">
                 <div class="flex items-start justify-between mb-3">
-                    <h3 class="text-xl font-bold text-gray-900 group-hover:text-primary-600 transition-colors">
-                        ${repo.name}
+                    <h3 class="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors">
+                        <a href="${repo.url}" target="_blank">${repo.name}</a>
                     </h3>
                     <div class="flex items-center space-x-3 text-sm text-gray-500">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                             </svg>
-                            ${repo.stars}
+                            ${formatNumber(repo.stars)}
                         </span>
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414L2.586 7l3.707-3.707a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+                                <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414L2.586 7l3.707-3.707a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
-                            ${repo.forks}
+                            ${formatNumber(repo.forks)}
                         </span>
                     </div>
                 </div>
                 <p class="text-gray-600 text-sm mb-4 line-clamp-3">${repo.description}</p>
-                <div class="flex items-center justify-between">
-                    <div class="flex items-center space-x-2">
-                        ${repo.language ? `<span class="px-2 py-1 bg-gray-100 text-gray-700 text-xs rounded">${repo.language}</span>` : ''}
-                        ${repo.topics.slice(0, 2).map(topic =>
-        `<span class="px-2 py-1 bg-blue-100 text-blue-700 text-xs rounded">${topic}</span>`
-    ).join('')}
-                    </div>
-                    <div class="flex space-x-2">
-                        ${repo.has_pages && repo.pages_url ?
-            `<a href="${repo.pages_url}" target="_blank" class="px-3 py-1 bg-green-600 text-white text-xs font-medium rounded hover:bg-green-700 transition-colors">
-                                View Project
-                            </a>` : ''
-        }
-                        <a href="${repo.url}" target="_blank" class="px-3 py-1 bg-gray-600 text-white text-xs font-medium rounded hover:bg-gray-700 transition-colors">
-                            GitHub
-                        </a>
-                    </div>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    ${repo.topics.slice(0, 3).map(topic => `
+                        <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
+                            ${topic}
+                        </span>
+                    `).join('')}
+                    ${repo.topics.length > 3 ? `<span class="text-xs text-gray-500">+${repo.topics.length - 3} more</span>` : ''}
                 </div>
+                <a href="${repo.url}" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm">
+                    View Project
+                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+                    </svg>
+                </a>
             </div>
         </div>
     `).join('');
@@ -311,143 +278,52 @@ function renderProjects() {
         card.style.opacity = '0';
         card.style.transform = 'translateY(20px)';
         setTimeout(() => {
-            card.style.transition = 'all 0.6s ease';
+            card.style.transition = 'all 0.5s ease';
             card.style.opacity = '1';
             card.style.transform = 'translateY(0)';
         }, index * 100);
     });
 }
 
-// Get display name for category
-function getCategoryDisplayName(category) {
-    // Use config if available, otherwise use defaults
-    const categoryNames = websiteConfig.categories?.displayNames || {
-        'ai': 'AI',
-        'audio': 'TTS',
-        'web': 'Web'
-    };
-    return categoryNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
-}
-
-// Update filter buttons based on available categories
-function updateFilterButtons() {
-    const filterButtonsContainer = document.querySelector('.flex.flex-wrap.gap-2.justify-center.md\\:justify-start');
-    if (!filterButtonsContainer) return;
-
-    // Get available categories from repositories
-    const availableCategories = [...new Set(repositories.map(repo => repo.category))];
-
-    // Create filter buttons HTML
-    const filterButtonsHTML = `
-        <button class="filter-btn active px-4 py-2 rounded-lg bg-primary-600 text-white text-sm sm:text-base transition-colors" data-filter="all">All</button>
-        ${availableCategories.map(category => `
-            <button class="filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 text-sm sm:text-base transition-colors" data-filter="${category}">
-                ${getCategoryDisplayName(category)}
-            </button>
-        `).join('')}
-    `;
-
-    filterButtonsContainer.innerHTML = filterButtonsHTML;
-}
-
 // Setup event listeners
 function setupEventListeners() {
-    // Filter buttons
-    document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('filter-btn')) {
-            // Update active filter button
-            document.querySelectorAll('.filter-btn').forEach(btn => {
+    // Mobile menu functionality
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (mobileMenuBtn && mobileMenu) {
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking on links
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+
+    // Search functionality
+    searchInput.addEventListener('input', (e) => {
+        searchTerm = e.target.value;
+        renderProjects();
+    });
+
+    // Filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            filterButtons.forEach(btn => {
                 btn.classList.remove('active', 'bg-primary-600', 'text-white');
                 btn.classList.add('bg-gray-200', 'text-gray-700');
             });
-
-            e.target.classList.add('active', 'bg-primary-600', 'text-white');
-            e.target.classList.remove('bg-gray-200', 'text-gray-700');
-
-            // Update filter and re-render
-            currentFilter = e.target.dataset.filter;
+            button.classList.remove('bg-gray-200', 'text-gray-700');
+            button.classList.add('active', 'bg-primary-600', 'text-white');
+            currentFilter = button.dataset.filter;
             renderProjects();
-        }
+        });
     });
 
-    // Search functionality
-    if (searchInput) {
-        searchInput.addEventListener('input', function (e) {
-            searchTerm = e.target.value;
-            renderProjects();
-        });
-    }
-
-    // Sort functionality
-    const sortSelect = document.getElementById('sort');
-    if (sortSelect) {
-        sortSelect.addEventListener('change', function (e) {
-            currentSort = e.target.value;
-            renderProjects();
-        });
-    }
-}
-
-// Render news section
-function renderNews() {
-    if (!newsGrid) return;
-
-    // Generate recent repository updates as news
-    const recentUpdates = repositories
-        .filter(repo => repo.stars > 10)
-        .slice(0, 3)
-        .map(repo => ({
-            title: `${repo.name} reaches ${repo.stars} stars!`,
-            description: `Our ${repo.name} project continues to grow with ${repo.stars} stars and ${repo.forks} forks.`,
-            date: new Date(),
-            type: 'update',
-            url: repo.url
-        }));
-
-    // Static news items
-    const staticNews = [
-        {
-            title: 'New ComfyUI Nodes Released',
-            description: 'We have released several new ComfyUI custom nodes for advanced AI workflows.',
-            date: new Date('2024-12-15'),
-            type: 'release',
-            url: 'https://github.com/1038lab'
-        },
-        {
-            title: 'Community Milestone',
-            description: 'Our projects have reached over 1,000 stars! Thank you for your continued support.',
-            date: new Date('2024-12-10'),
-            type: 'milestone',
-            url: 'https://github.com/1038lab'
-        }
-    ];
-
-    const allNews = [...recentUpdates, ...staticNews]
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 6); // Show max 6 news items
-
-    newsGrid.innerHTML = allNews.map(news => `
-        <article class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
-            <div class="flex items-center justify-between mb-3">
-                <span class="px-3 py-1 bg-primary-100 text-primary-800 text-xs font-medium rounded-full">
-                    ${news.type.charAt(0).toUpperCase() + news.type.slice(1)}
-                </span>
-                <time class="text-sm text-gray-500">
-                    ${news.date.toLocaleDateString()}
-                </time>
-            </div>
-            <h3 class="text-lg font-semibold text-gray-900 mb-2">
-                <a href="${news.url}" target="_blank" class="hover:text-primary-600 transition-colors">
-                    ${news.title}
-                </a>
-            </h3>
-            <p class="text-gray-600 text-sm">${news.description}</p>
-        </article>
-    `).join('');
-}
-
-// Setup scroll effects
-function setupScrollEffects() {
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
@@ -461,16 +337,48 @@ function setupScrollEffects() {
             }
         });
     });
+}
 
-    // Header background on scroll
-    const header = document.querySelector('header');
-    if (header) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                header.classList.add('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
-            } else {
-                header.classList.remove('bg-white/95', 'backdrop-blur-sm', 'shadow-sm');
+// Setup scroll effects
+function setupScrollEffects() {
+    const navbar = document.querySelector('nav');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            navbar.classList.add('shadow-lg');
+        } else {
+            navbar.classList.remove('shadow-lg');
+        }
+    });
+
+    // Intersection Observer for animations
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
+    }, observerOptions);
+
+    // Observe sections for scroll animations
+    document.querySelectorAll('section').forEach(section => {
+        section.style.opacity = '0';
+        section.style.transform = 'translateY(30px)';
+        section.style.transition = 'all 0.6s ease';
+        observer.observe(section);
+    });
+}
+
+// Utility functions
+function formatNumber(num) {
+    if (num >= 1000) {
+        return (num / 1000).toFixed(1) + 'k';
     }
+    return num.toString();
 }
