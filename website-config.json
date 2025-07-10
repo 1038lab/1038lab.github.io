@@ -1,0 +1,43 @@
+{
+  "website": {
+    "title": "1038lab - AI Innovation Hub",
+    "description": "Cutting-edge AI solutions and ComfyUI custom nodes",
+    "url": "https://1038lab.github.io"
+  },
+  "repositories": {
+    "hiddenRepos": [
+      "ComfyUI-Manager"
+    ],
+    "featuredRepos": [
+      "ComfyUI-RMBG",
+      "ComfyUI-SparkTTS",
+      "ComfyUI-OmniGen",
+      "ComfyUI-ReduxFineTune"
+    ],
+    "filters": {
+      "hideForks": true,
+      "hideDotFiles": true,
+      "minimumStars": 0
+    }
+  },
+  "categories": {
+    "displayNames": {
+      "comfyui": "ComfyUI",
+      "ai": "AI",
+      "audio": "TTS",
+      "image": "Image",
+      "web": "Web",
+      "text": "Text",
+      "workflow": "Workflow"
+    },
+    "order": ["comfyui", "ai", "audio", "image", "web"]
+  },
+  "display": {
+    "projectsPerPage": 50,
+    "showStarCount": true,
+    "showForkCount": true,
+    "showLanguage": true,
+    "showTopics": true,
+    "maxTopicsDisplay": 3
+  }
+}
