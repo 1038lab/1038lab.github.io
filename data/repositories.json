@@ -22,7 +22,7 @@
       "language": "Python",
       "topics": ["text-to-image", "omnigen", "comfyui", "ai"],
       "url": "https://github.com/1038lab/ComfyUI-OmniGen",
-      "has_pages": true,
+      "has_pages": false,
       "pages_url": "https://1038lab.github.io/ComfyUI-OmniGen",
       "category": "ai",
       "featured": true,
