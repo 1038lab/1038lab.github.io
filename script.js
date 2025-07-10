@@ -1,5 +1,13 @@
 // GitHub API configuration
 const GITHUB_API_URL = 'https://api.github.com/orgs/1038lab/repos?per_page=100&sort=stars&direction=desc';
+const LOCAL_DATA_URL = 'data/repositories.json';
+
+// Configuration
+const CONFIG = {
+    cacheTimeout: 10 * 60 * 1000, // 10 minutes cache expiration
+    preferLocalData: true, // Prefer local data over API
+    autoRefreshInterval: 60 * 60 * 1000 // Auto refresh every 1 hour
+};
 
 // Static fallback data (in case API fails)
 const staticRepositories = [
@@ -189,11 +197,52 @@ const staticRepositories = [
 
 // Dynamic repositories array (will be populated from API)
 let repositories = [];
+let newsItems = [];
+let lastUpdated = null;
+
+// Load local data
+async function loadLocalData() {
+    try {
+        console.log('Attempting to load local data...');
+        const response = await fetch(LOCAL_DATA_URL);
+        
+        if (!response.ok) {
+            throw new Error(`Failed to load local data: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        console.log('Local data loaded successfully');
+        
+        // Check if data is expired
+        if (data.lastUpdated) {
+            const updateTime = new Date(data.lastUpdated);
+            const now = new Date();
+            const diff = now - updateTime;
+            
+            // If data is older than one day, try to fetch from API
+            if (diff > 24 * 60 * 60 * 1000) {
+                console.log('Local data is expired, attempting to fetch from API');
+                return null;
+            }
+            
+            lastUpdated = updateTime;
+        }
+        
+        return {
+            repositories: data.repositories || [],
+            news: data.news || [],
+            config: data.config || {}
+        };
+    } catch (error) {
+        console.error('Failed to load local data:', error);
+        return null;
+    }
+}
 
 // GitHub API functions
 async function fetchGitHubRepos() {
     try {
-        console.log('Fetching repositories from GitHub API...');
+        console.log('Fetching repository data from GitHub API...');
         const response = await fetch(GITHUB_API_URL);
 
         if (!response.ok) {
@@ -201,59 +250,109 @@ async function fetchGitHubRepos() {
         }
 
         const repos = await response.json();
-        console.log(`Fetched ${repos.length} repositories from GitHub`);
-
-        // Filter out unwanted repositories using config
-        const hiddenRepos = WEBSITE_CONFIG.hiddenRepositories || [];
-        const filteredRepos = repos.filter(repo =>
-            !repo.fork &&
-            !hiddenRepos.includes(repo.name) &&
-            !repo.archived
-        );
-
-        console.log(`Filtered to ${filteredRepos.length} repositories`);
-
-        // Convert to our format with custom overrides
-        const formattedRepos = filteredRepos.map(repo => {
-            const customInfo = WEBSITE_CONFIG.customRepositoryInfo[repo.name] || {};
-
-            // Enhanced GitHub Pages detection
-            const hasPages = detectGitHubPages(repo, customInfo);
-            const pagesUrl = hasPages ? `https://1038lab.github.io/${repo.name}` : null;
-
-            // Debug logging for Pages detection
-            if (repo.name === 'ComfyUI-RMBG' || repo.has_pages || hasPages) {
-                console.log(`Pages detection for ${repo.name}:`, {
-                    api_has_pages: repo.has_pages,
-                    homepage: repo.homepage,
-                    custom_override: customInfo.has_pages,
-                    final_has_pages: hasPages,
-                    pages_url: pagesUrl
-                });
-            }
-
-            return {
-                name: repo.name,
-                description: customInfo.description || repo.description || 'No description available',
-                stars: repo.stargazers_count,
-                forks: repo.forks_count,
-                language: repo.language || 'Unknown',
-                topics: repo.topics || [],
-                url: repo.html_url,
-                homepage: repo.homepage,
-                has_pages: hasPages,
-                pages_url: pagesUrl,
-                category: customInfo.category || categorizeRepo(repo.name, repo.topics),
-                image: customInfo.customImage || getRepoImage(repo.name, repo.topics),
-                featured: customInfo.featured || false
-            };
-        });
-
-        return formattedRepos;
+        console.log(`Retrieved ${repos.length} repositories`);
+        return repos;
     } catch (error) {
-        console.error('Error fetching GitHub repos:', error);
-        console.log('Falling back to static data');
-        return staticRepositories;
+        console.error('Failed to fetch repositories:', error);
+        console.log('Using static data as fallback');
+        return null;
+    }
+}
+
+// Initialize data
+async function initData() {
+    showLoadingState();
+    
+    // Try to load local data first
+    if (CONFIG.preferLocalData) {
+        const localData = await loadLocalData();
+        if (localData) {
+            repositories = localData.repositories;
+            newsItems = localData.news;
+            
+            // Update UI
+            updateHeroStats();
+            renderProjects();
+            renderNews();
+            
+            // Update last updated time
+            updateLastUpdatedTime();
+            
+            console.log('Page rendered using local data');
+            return;
+        }
+    }
+    
+    // If local data is unavailable, try to fetch from API
+    const repos = await fetchGitHubRepos();
+    
+    if (repos) {
+        // Process repository data from API
+        repositories = processRepositories(repos);
+    } else {
+        // Use static data
+        repositories = [...staticRepositories];
+    }
+    
+    // Update UI
+    updateHeroStats();
+    renderProjects();
+    renderNews();
+    
+    // Setup auto refresh
+    setupAutoRefresh();
+}
+
+// Process repositories
+function processRepositories(repos) {
+    // Filter hidden repositories
+    const hiddenRepos = WEBSITE_CONFIG.hiddenRepositories || [];
+    const filteredRepos = repos.filter(repo => !hiddenRepos.includes(repo.name));
+    
+    // Process each repository
+    return filteredRepos.map(repo => {
+        // Get custom info
+        const customInfo = WEBSITE_CONFIG.customRepositoryInfo[repo.name] || {};
+        
+        // Determine category
+        const category = customInfo.category || categorizeRepo(repo.name, repo.topics || []);
+        
+        // Determine if has GitHub Pages
+        const hasPages = detectGitHubPages(repo, customInfo);
+        
+        // Return processed repository object
+        return {
+            name: repo.name,
+            description: customInfo.description || repo.description || '',
+            stars: repo.stargazers_count,
+            forks: repo.forks_count,
+            language: repo.language,
+            topics: repo.topics || [],
+            url: repo.html_url,
+            has_pages: hasPages,
+            pages_url: hasPages ? `https://1038lab.github.io/${repo.name}` : '',
+            category: category,
+            featured: !!customInfo.featured,
+            image: customInfo.customImage || getRepoImage(repo.name, repo.topics || [])
+        };
+    });
+}
+
+// Update last updated time
+function updateLastUpdatedTime() {
+    const lastUpdatedElement = document.getElementById('lastUpdated');
+    if (lastUpdatedElement && lastUpdated) {
+        lastUpdatedElement.innerHTML = `Last updated: <span class="font-medium">${formatDate(lastUpdated)}</span>`;
+    }
+}
+
+// Setup auto refresh
+function setupAutoRefresh() {
+    if (CONFIG.autoRefreshInterval > 0) {
+        setInterval(() => {
+            console.log('Auto refreshing data...');
+            initData();
+        }, CONFIG.autoRefreshInterval);
     }
 }
 
@@ -317,22 +416,11 @@ let searchTerm = '';
 let currentSort = 'stars';
 
 // Initialize the page
-document.addEventListener('DOMContentLoaded', async function () {
-    // Show loading state
-    showLoadingState();
-
-    // Load repositories from GitHub API
-    repositories = await fetchGitHubRepos();
-
-    // Update stats in hero section
-    updateHeroStats();
-
-    // Render projects and setup
-    renderProjects();
-    renderNews();
-    updateFilterButtons();
+document.addEventListener('DOMContentLoaded', () => {
+    initData();
     setupEventListeners();
     setupScrollEffects();
+    setupFilterEventListeners();
 });
 
 // Show loading state while fetching data
@@ -656,44 +744,26 @@ function setupFilterEventListeners() {
 
 // Render news/updates
 function renderNews() {
+    const newsGrid = document.getElementById('news-grid');
     if (!newsGrid) return;
 
-    // Generate recent updates based on repository data
-    const recentUpdates = repositories
-        .filter(repo => repo.featured) // Show only featured projects
-        .slice(0, 3) // Limit to 3 items
-        .map(repo => ({
-            title: `${repo.name} Updated`,
-            description: `Latest improvements and features added to ${repo.name}`,
-            date: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000), // Random date within last 30 days
-            type: 'update',
-            repo: repo.name,
-            url: repo.url
-        }));
+    // Clear existing content
+    newsGrid.innerHTML = '';
 
-    // Add some static news items
-    const staticNews = [
+    // If no news data, use default data
+    const newsToRender = newsItems.length > 0 ? newsItems : [
         {
-            title: 'New AI Model Integration',
-            description: 'We\'ve integrated cutting-edge AI models across our ComfyUI ecosystem for enhanced performance.',
-            date: new Date('2024-12-15'),
-            type: 'announcement',
-            url: 'https://github.com/1038lab'
-        },
-        {
-            title: 'Community Milestone',
-            description: 'Our projects have reached over 1,000 stars! Thank you for your continued support.',
-            date: new Date('2024-12-10'),
-            type: 'milestone',
-            url: 'https://github.com/1038lab'
+            title: "Website Update",
+            description: "Our website now supports automatic repository data updates!",
+            date: new Date().toISOString().split('T')[0],
+            type: "announcement",
+            url: "https://github.com/1038lab"
         }
     ];
 
-    const allNews = [...recentUpdates, ...staticNews]
-        .sort((a, b) => new Date(b.date) - new Date(a.date))
-        .slice(0, 6); // Show max 6 news items
-
-    newsGrid.innerHTML = allNews.map(news => `
+    // Render news cards
+    newsToRender.forEach(news => {
+        newsGrid.innerHTML += `
         <div class="bg-white rounded-xl shadow-sm border border-gray-200 p-6 hover:shadow-lg transition-all duration-300">
             <div class="flex items-start justify-between mb-3">
                 <div class="flex items-center space-x-2">
@@ -711,7 +781,8 @@ function renderNews() {
                 </svg>
             </a>
         </div>
-    `).join('');
+    `;
+    });
 }
 
 // Get color class for news type
