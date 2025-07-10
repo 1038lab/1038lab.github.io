@@ -1,0 +1,130 @@
+name: Update Repository Data
+
+on:
+  schedule:
+    - cron: '0 6 * * *'  # Run daily at 6 AM UTC
+  workflow_dispatch:      # Allow manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Need write permission to commit changes
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          
+      - name: Update repository data
+        run: |
+          # Simple script to update repository data
+          node -e "
+          const https = require('https');
+          const fs = require('fs');
+          
+          // GitHub API URL
+          const apiUrl = 'https://api.github.com/users/1038lab/repos?per_page=100&sort=stars&direction=desc';
+          
+          console.log('Fetching repository data...');
+          
+          https.get(apiUrl, {
+            headers: {
+              'User-Agent': 'GitHub-Actions',
+              'Accept': 'application/vnd.github.v3+json'
+            }
+          }, (res) => {
+            let data = '';
+            res.on('data', chunk => data += chunk);
+            res.on('end', () => {
+              try {
+                const repos = JSON.parse(data);
+                console.log(\`Found \${repos.length} repositories\`);
+                
+                // Filter out unwanted repositories
+                const filteredRepos = repos.filter(repo => 
+                  !repo.name.startsWith('.') && 
+                  repo.name !== 'ComfyUI-Manager'
+                );
+                
+                // Convert to required format
+                const processedRepos = filteredRepos.map(repo => ({
+                  name: repo.name,
+                  description: repo.description || '',
+                  stars: repo.stargazers_count,
+                  forks: repo.forks_count,
+                  language: repo.language,
+                  topics: repo.topics || [],
+                  url: repo.html_url,
+                  has_pages: repo.has_pages,
+                  pages_url: repo.has_pages ? \`https://1038lab.github.io/\${repo.name}\` : '',
+                  category: getCategoryFromName(repo.name, repo.topics || []),
+                  featured: repo.stargazers_count > 50,
+                  image: getImageForRepo(repo.name, repo.topics || [])
+                }));
+                
+                // Create final data structure
+                const finalData = {
+                  repositories: processedRepos,
+                  lastUpdated: new Date().toISOString()
+                };
+                
+                // Ensure directory exists
+                if (!fs.existsSync('data')) {
+                  fs.mkdirSync('data');
+                }
+                
+                // Write to file
+                fs.writeFileSync('data/repositories.json', JSON.stringify(finalData, null, 2));
+                console.log(\`Successfully updated data with \${processedRepos.length} repositories\`);
+                
+              } catch (error) {
+                console.error('Error processing data:', error);
+                process.exit(1);
+              }
+            });
+          }).on('error', (error) => {
+            console.error('Error fetching data:', error);
+            process.exit(1);
+          });
+          
+          // Helper functions
+          function getCategoryFromName(name, topics) {
+            const lowerName = name.toLowerCase();
+            const lowerTopics = topics.map(t => t.toLowerCase());
+            
+            if (lowerTopics.includes('tts') || lowerName.includes('tts')) return 'audio';
+            if (lowerTopics.includes('image') || lowerName.includes('image')) return 'image';
+            if (lowerName === '1038lab.github.io') return 'web';
+            return 'ai';
+          }
+          
+          function getImageForRepo(name, topics) {
+            const images = {
+              audio: 'https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+              image: 'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+              web: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+              ai: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
+            };
+            
+            const category = getCategoryFromName(name, topics);
+            return images[category] || images.ai;
+          }
+          "
+          
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/repositories.json
+          if git diff --quiet && git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto update repository data"
+            git push
+            echo "Changes committed and pushed"
+          fi
