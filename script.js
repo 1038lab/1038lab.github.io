@@ -218,12 +218,16 @@ function renderProjects() {
         const projectLink = repo.has_pages && repo.pages_url ? repo.pages_url : repo.url;
         const repoLink = repo.url; // Always link to repository for "View Repo"
 
+        // Get image from config, fallback to repo image or default
+        const configImages = websiteConfig.images || {};
+        const repoImage = configImages[repo.name] || repo.image || 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';
+
         return `
         <div class="project-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
             data-category="${repo.category}" style="opacity: 1; transform: translateY(0px); transition: 0.5s;">
             <div class="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden cursor-pointer"
                 onclick="window.open('${projectLink}', '_blank')">
-                <img src="${repo.image}" alt="${repo.name}" class="w-full h-full object-cover">
+                <img src="${repoImage}" alt="${repo.name}" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div class="absolute top-4 right-4">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/90 text-gray-800">
