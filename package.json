@@ -1,0 +1,26 @@
+{
+  "name": "1038lab-website",
+  "version": "1.0.0",
+  "description": "AILab Official Website",
+  "private": true,
+  "scripts": {
+    "update-data": "node .github/scripts/update-data.js"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "fs-extra": "^10.1.0"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1038lab/1038lab.github.io.git"
+  },
+  "author": "1038lab",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/1038lab/1038lab.github.io/issues"
+  },
+  "homepage": "https://1038lab.github.io"
+} 
