@@ -22,15 +22,17 @@
   },
   "categories": {
     "displayNames": {
-      "comfyui": "ComfyUI",
-      "ai": "AI",
-      "audio": "TTS",
       "image": "Image",
-      "web": "Web",
-      "text": "Text",
-      "workflow": "Workflow"
+      "ai": "AI",
+      "tts": "Tts",
+      "web": "Web"
     },
-    "order": ["comfyui", "ai", "audio", "image", "web"]
+    "order": [
+      "image",
+      "ai",
+      "tts",
+      "web"
+    ]
   },
   "display": {
     "projectsPerPage": 50,

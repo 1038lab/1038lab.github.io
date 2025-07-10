@@ -15,10 +15,8 @@ async function loadWebsiteConfig() {
         websiteConfig = {
             categories: {
                 displayNames: {
-                    'comfyui': 'ComfyUI',
                     'ai': 'AI',
                     'audio': 'TTS',
-                    'image': 'Image',
                     'web': 'Web'
                 }
             }
@@ -67,7 +65,7 @@ async function fetchGitHubRepos() {
                         pages_url: repo.has_pages ? `https://1038lab.github.io/${repo.name}` : '',
                         category: categorizeRepo(repo.name, repo.topics || []),
                         featured: repo.stargazers_count > 50,
-                        image: getRepoImage(repo.name, repo.topics || [])
+                        image: generateUniqueImage(repo.name)
                     }));
             }
         } catch (apiError) {
@@ -87,7 +85,7 @@ async function fetchGitHubRepos() {
                 url: "https://github.com/1038lab/ComfyUI-RMBG",
                 has_pages: true,
                 pages_url: "https://1038lab.github.io/ComfyUI-RMBG",
-                category: "comfyui",
+                category: "ai",
                 featured: true,
                 image: "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
             }
@@ -99,52 +97,36 @@ async function fetchGitHubRepos() {
 function categorizeRepo(name, topics) {
     const nameUpper = name.toUpperCase();
 
-    // Check for TTS first (higher priority than ComfyUI)
-    if (topics.includes('tts') || nameUpper.includes('TTS')) return 'audio';
-    if (nameUpper.startsWith('COMFYUI-')) return 'comfyui';
+    if (topics.includes('tts') || nameUpper.includes('TTS')) return 'tts';
     if (topics.includes('image-processing') || nameUpper.includes('RMBG') || nameUpper.includes('LBM') || nameUpper.includes('REMOVER')) return 'image';
     if (nameUpper.includes('GITHUB.IO') || topics.includes('website')) return 'web';
     return 'ai';
 }
 
-// Get repository image
-function getRepoImage(name, topics) {
-    const imageMap = {
-        'ai': [
-            'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ],
-        'audio': [
-            'https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ],
-        'image': [
-            'https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ],
-        'comfyui': [
-            'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
-            'https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ],
-        'web': [
-            'https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80'
-        ]
-    };
+// Generate unique image for each repository (for fallback only)
+function generateUniqueImage(repoName) {
+    // Different image IDs for variety
+    const imageIds = [
+        '1620712943543-bcc4688e7485',
+        '1677442136019-21780ecad995',
+        '1485827404703-89b55fcc595e',
+        '1589254065878-42c9da997008',
+        '1507003211169-0a1dd7228f2d',
+        '1516280440614-37939bbacd81',
+        '1555949963-aa79dcee981c',
+        '1558618666-fcd25c85cd64',
+        '1551288049-bebda4e38f71',
+        '1460925895917-afdab827c52f'
+    ];
 
-    const category = categorizeRepo(name, topics);
-    const images = imageMap[category] || imageMap['ai'];
-
-    // Use name hash to consistently assign same image to same repo
-    const hash = name.split('').reduce((a, b) => {
+    // Use repo name to consistently pick same image
+    const hash = repoName.split('').reduce((a, b) => {
         a = ((a << 5) - a) + b.charCodeAt(0);
         return a & a;
     }, 0);
 
-    return images[Math.abs(hash) % images.length];
+    const imageId = imageIds[Math.abs(hash) % imageIds.length];
+    return `https://images.unsplash.com/photo-${imageId}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`;
 }
 
 // DOM elements
@@ -340,12 +322,8 @@ function renderProjects() {
 function getCategoryDisplayName(category) {
     // Use config if available, otherwise use defaults
     const categoryNames = websiteConfig.categories?.displayNames || {
-        'comfyui': 'ComfyUI',
         'ai': 'AI',
-        'image': 'Image',
-        'text': 'Text',
         'audio': 'TTS',
-        'workflow': 'Workflow',
         'web': 'Web'
     };
     return categoryNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
