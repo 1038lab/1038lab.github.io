@@ -1,0 +1,37 @@
+name: Update Repository Data
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run every day at 00:00 UTC (adjust as needed)
+  workflow_dispatch:      # Allow manual triggering
+
+jobs:
+  update-data:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Need write permission to commit changes
+      
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          
+      - name: Install dependencies
+        run: npm install axios fs-extra
+
+      - name: Update repository data
+        run: node .github/scripts/update-data.js
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          
+      - name: Commit and push if changed
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add data/repositories.json
+          git diff --quiet && git diff --staged --quiet || git commit -m "Auto update repository data [skip ci]"
+          git push 
