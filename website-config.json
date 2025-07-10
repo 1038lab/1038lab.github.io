@@ -22,11 +22,13 @@
   },
   "categories": {
     "displayNames": {
+      "comfyui": "ComfyUI",
       "ai": "AI",
       "audio": "TTS",
       "web": "Web"
     },
     "order": [
+      "comfyui",
       "ai",
       "audio",
       "web"

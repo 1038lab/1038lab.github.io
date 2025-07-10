@@ -1,137 +1,64 @@
-// Dynamic repositories array (will be populated from data/repositories.json)
+// Global variables for data
 let repositories = [];
 let websiteConfig = {};
 
-// Load website configuration
-async function loadWebsiteConfig() {
+// Load data from JSON files
+async function loadData() {
     try {
-        const response = await fetch('website-config.json');
-        if (response.ok) {
-            websiteConfig = await response.json();
-            console.log('Website config loaded successfully');
+        // Load repositories data
+        const repoResponse = await fetch('./data/repositories.json');
+        if (!repoResponse.ok) {
+            throw new Error(`Failed to load repositories: ${repoResponse.status}`);
         }
+        const repoData = await repoResponse.json();
+        repositories = repoData.repositories || [];
+
+        // Load website config
+        const configResponse = await fetch('./website-config.json');
+        if (!configResponse.ok) {
+            throw new Error(`Failed to load config: ${configResponse.status}`);
+        }
+        websiteConfig = await configResponse.json();
+
+        // Filter repositories based on config
+        repositories = filterRepositories(repositories);
+
+        return true;
     } catch (error) {
-        console.log('Using default config');
-        websiteConfig = {
-            categories: {
-                displayNames: {
-                    'ai': 'AI',
-                    'audio': 'TTS',
-                    'web': 'Web'
-                }
-            }
-        };
+        console.error('Error loading data:', error);
+        return false;
     }
 }
 
-// Load repositories from JSON file (updated by GitHub Actions)
-async function fetchGitHubRepos() {
-    try {
-        console.log('Loading repositories from data file...');
-        const response = await fetch('data/repositories.json');
+// Filter repositories based on website config
+function filterRepositories(repos) {
+    const config = websiteConfig.repositories || {};
+    const hiddenRepos = config.hiddenRepos || [];
+    const filters = config.filters || {};
 
-        if (!response.ok) {
-            throw new Error(`Data file error: ${response.status}`);
+    return repos.filter(repo => {
+        // Skip hidden repositories
+        if (hiddenRepos.includes(repo.name)) {
+            return false;
         }
 
-        const data = await response.json();
-        console.log(`Loaded ${data.repositories.length} repositories from data file`);
-
-        // The data is already in our format, just return it
-        return data.repositories;
-    } catch (error) {
-        console.error('Error fetching GitHub repos:', error);
-        console.log('Falling back to GitHub API for local testing');
-
-        try {
-            const response = await fetch('https://api.github.com/orgs/1038lab/repos?per_page=100');
-            if (response.ok) {
-                const repos = await response.json();
-
-                // Process the API data to match our format
-                return repos
-                    .filter(repo => !repo.fork && repo.name !== '.github')
-                    .map(repo => ({
-                        name: repo.name,
-                        description: repo.description || '',
-                        stars: repo.stargazers_count,
-                        forks: repo.forks_count,
-                        language: repo.language,
-                        topics: repo.topics || [],
-                        url: repo.html_url,
-                        has_pages: repo.has_pages,
-                        pages_url: repo.has_pages ? `https://1038lab.github.io/${repo.name}` : '',
-                        category: categorizeRepo(repo.name, repo.topics || []),
-                        featured: repo.stargazers_count > 50,
-                        image: generateUniqueImage(repo.name)
-                    }));
-            }
-        } catch (apiError) {
-            console.error('GitHub API also failed:', apiError);
+        // Skip forks if configured
+        if (filters.hideForks && repo.fork) {
+            return false;
         }
 
-        return [];
-    }
+        // Skip repositories with insufficient stars
+        if (filters.minimumStars && repo.stars < filters.minimumStars) {
+            return false;
+        }
+
+        return true;
+    });
 }
 
-// Categorize repository based on name and topics
-function categorizeRepo(name, topics) {
-    const nameAndTopics = (name + ' ' + topics.join(' ')).toLowerCase();
-
-    if (nameAndTopics.includes('tts') || nameAndTopics.includes('text-to-speech') ||
-        nameAndTopics.includes('sparktts') || nameAndTopics.includes('edgetts') ||
-        nameAndTopics.includes('megatts') || nameAndTopics.includes('kokoro')) {
-        return 'tts';
-    }
-    if (nameAndTopics.includes('image') || nameAndTopics.includes('rmbg') ||
-        nameAndTopics.includes('background') || nameAndTopics.includes('lbm') ||
-        nameAndTopics.includes('minimax') || nameAndTopics.includes('captioning') ||
-        nameAndTopics.includes('img2txt') || nameAndTopics.includes('blip')) {
-        return 'image';
-    }
-    if (nameAndTopics.includes('web') || nameAndTopics.includes('website') ||
-        nameAndTopics.includes('github-pages')) {
-        return 'web';
-    }
-    return 'ai'; // Default category for ComfyUI and other AI projects
-}
-
-// Generate unique image for each repository
-function generateUniqueImage(repoName) {
-    // Create a simple hash from the repo name
-    let hash = 0;
-    for (let i = 0; i < repoName.length; i++) {
-        const char = repoName.charCodeAt(i);
-        hash = ((hash << 5) - hash) + char;
-        hash = hash & hash; // Convert to 32-bit integer
-    }
-
-    // Array of different Unsplash image IDs for variety
-    const imageIds = [
-        '1555949963-aa79dcee981c', // AI/Tech
-        '1620712943543-bcc4688e7485', // Digital art
-        '1589254065878-42c9da997008', // Audio/Sound
-        '1677442136019-21780ecad995', // Neural networks
-        '1507003211169-0a1dd7228f2d', // Voice/Speech
-        '1558618666-fcd25c85cd64', // Lighting
-        '1516280440614-37939bbacd81', // Audio waves
-        '1485827404703-89b55fcc595e', // Code/Programming
-        '1611162617474-5b21e879e113', // Video/Media
-        '1460925895917-afdab827c52f', // Web development
-        '1518709268805-4e9042af9f23', // Machine learning
-        '1451187580459-43d4b3f05c65', // Data visualization
-        '1504639725590-34d0984388bd', // Technology
-        '1526374965343-dd52b1852190'  // Innovation
-    ];
-
-    const imageId = imageIds[Math.abs(hash) % imageIds.length];
-    return `https://images.unsplash.com/photo-${imageId}?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80`;
-}
-
-// DOM elements
-const projectsGrid = document.getElementById('projects-grid');
-const searchInput = document.getElementById('search');
-const filterButtons = document.querySelectorAll('.filter-btn');
+// DOM elements - will be initialized after DOM loads
+let projectsGrid;
+let searchInput;
 
 // State
 let currentFilter = 'all';
@@ -139,75 +66,90 @@ let searchTerm = '';
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', async function () {
-    // Show loading state
-    showLoadingState();
+    // Initialize DOM elements
+    projectsGrid = document.getElementById('projects-grid');
+    searchInput = document.getElementById('search');
 
-    // Load website configuration first
-    await loadWebsiteConfig();
-
-    // Load repositories from GitHub API
-    repositories = await fetchGitHubRepos();
-
-    // Ensure all repositories have categories assigned and recategorize if needed
-    repositories = repositories.map(repo => {
-        // Always recategorize based on name and topics for consistency
-        repo.category = categorizeRepo(repo.name, repo.topics || []);
-        return repo;
-    });
-
-    console.log(`Processed ${repositories.length} repositories with categories`);
-
-    // Update stats in hero section
-    updateHeroStats();
-
-    // Render projects and setup
-    renderProjects();
-    setupEventListeners();
-    setupScrollEffects();
-});
-
-// Show loading state
-function showLoadingState() {
-    if (projectsGrid) {
-        projectsGrid.innerHTML = `
-            <div class="col-span-full text-center py-12">
-                <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600 mx-auto mb-4"></div>
-                <p class="text-gray-600">Loading projects...</p>
-            </div>
-        `;
-    }
-}
-
-// Update hero section stats with real data
-function updateHeroStats() {
-    const totalStars = repositories.reduce((sum, repo) => sum + repo.stars, 0);
-    const totalRepos = repositories.length;
-
-    // Update project count
-    const projectCountEl = document.querySelector('.text-3xl.font-bold.text-gray-900');
-    if (projectCountEl && projectCountEl.textContent === '14') {
-        projectCountEl.textContent = totalRepos.toString();
-    }
-
-    // Update stars count
-    const statsElements = document.querySelectorAll('.text-3xl.font-bold.text-gray-900');
-    if (statsElements.length >= 2) {
-        const starsEl = statsElements[1];
-        if (totalStars >= 1000) {
-            starsEl.textContent = (totalStars / 1000).toFixed(1) + 'K+';
-        } else {
-            starsEl.textContent = totalStars.toString();
+    const dataLoaded = await loadData();
+    if (dataLoaded) {
+        updateFilterButtons();
+        renderProjects();
+        setupEventListeners();
+        setupScrollEffects();
+    } else {
+        // Show error message if data loading fails
+        if (projectsGrid) {
+            projectsGrid.innerHTML = `
+                <div class="col-span-full text-center py-12">
+                    <div class="text-gray-400 text-6xl mb-4">⚠️</div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-2">Failed to load projects</h3>
+                    <p class="text-gray-600">Please try refreshing the page.</p>
+                </div>
+            `;
         }
     }
+});
+
+// Update filter buttons based on available categories
+function updateFilterButtons() {
+    let filterContainer = document.querySelector('div.flex.flex-wrap.gap-2');
+    if (!filterContainer) {
+        // Try alternative selector
+        filterContainer = document.querySelector('.flex-wrap');
+        if (!filterContainer) {
+            return;
+        }
+    }
+
+    // Get unique categories from repositories
+    const categories = [...new Set(repositories.map(repo => repo.category))].filter(Boolean);
+
+    // Get category display names from config
+    const categoryDisplayNames = websiteConfig.categories?.displayNames || {};
+    const categoryOrder = websiteConfig.categories?.order || [];
+
+    // Sort categories according to config order
+    const sortedCategories = [...categories].sort((a, b) => {
+        const indexA = categoryOrder.indexOf(a);
+        const indexB = categoryOrder.indexOf(b);
+        if (indexA === -1 && indexB === -1) return a.localeCompare(b);
+        if (indexA === -1) return 1;
+        if (indexB === -1) return -1;
+        return indexA - indexB;
+    });
+
+    // Create "All" button
+    const allButton = document.createElement('button');
+    allButton.className = 'filter-btn active px-4 py-2 rounded-lg bg-primary-600 text-white text-sm sm:text-base';
+    allButton.setAttribute('data-filter', 'all');
+    allButton.textContent = 'All';
+
+    // Clear existing filter buttons and add new ones
+    filterContainer.innerHTML = '';
+    filterContainer.appendChild(allButton);
+
+    // Add category buttons
+    sortedCategories.forEach(category => {
+        const displayName = categoryDisplayNames[category] || category.charAt(0).toUpperCase() + category.slice(1);
+        const button = document.createElement('button');
+        button.className = 'filter-btn px-4 py-2 rounded-lg bg-gray-200 text-gray-700 hover:bg-gray-300 text-sm sm:text-base';
+        button.setAttribute('data-filter', category);
+        button.textContent = displayName;
+        filterContainer.appendChild(button);
+    });
 }
 
 // Render projects
 function renderProjects() {
+    if (!projectsGrid) {
+        return;
+    }
+
     const filteredRepos = repositories.filter(repo => {
         const matchesFilter = currentFilter === 'all' || repo.category === currentFilter;
         const matchesSearch = repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            repo.description.toLowerCase().includes(searchTerm.toLowerCase()) ||
-            repo.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase()));
+            (repo.description && repo.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
+            (repo.topics && repo.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase())));
         return matchesFilter && matchesSearch;
     });
 
@@ -222,47 +164,66 @@ function renderProjects() {
         return;
     }
 
-    projectsGrid.innerHTML = filteredRepos.map(repo => `
+    projectsGrid.innerHTML = filteredRepos.map(repo => {
+        const displayConfig = websiteConfig.display || {};
+        const maxTopics = displayConfig.maxTopicsDisplay || 3;
+        const topics = repo.topics || [];
+        const language = repo.language || 'Unknown';
+        const description = repo.description || 'No description available';
+
+        // Determine the link destination - prefer GitHub Pages if available
+        const projectLink = repo.has_pages && repo.pages_url ? repo.pages_url : repo.url;
+        const repoLink = repo.url; // Always link to repository for "View Project"
+
+        return `
         <div class="project-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1" data-category="${repo.category}">
             <div class="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
                 <img src="${repo.image}" alt="${repo.name}" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div class="absolute top-4 right-4">
                     <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-white/90 text-gray-800">
-                        ${repo.language}
+                        ${language}
                     </span>
                 </div>
             </div>
             <div class="p-6">
                 <div class="flex items-start justify-between mb-3">
                     <h3 class="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors">
-                        <a href="${repo.url}" target="_blank">${repo.name}</a>
+                        <a href="${projectLink}" target="_blank">${repo.name}</a>
                     </h3>
+                    ${displayConfig.showStarCount !== false || displayConfig.showForkCount !== false ? `
                     <div class="flex items-center space-x-3 text-sm text-gray-500">
+                        ${displayConfig.showStarCount !== false ? `
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                             </svg>
                             ${formatNumber(repo.stars)}
                         </span>
+                        ` : ''}
+                        ${displayConfig.showForkCount !== false ? `
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414L2.586 7l3.707-3.707a1 1 0 011.414 0z" clip-rule="evenodd"/>
                             </svg>
                             ${formatNumber(repo.forks)}
                         </span>
+                        ` : ''}
                     </div>
+                    ` : ''}
                 </div>
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">${repo.description}</p>
+                <p class="text-gray-600 text-sm mb-4 line-clamp-3">${description}</p>
+                ${displayConfig.showTopics !== false && topics.length > 0 ? `
                 <div class="flex flex-wrap gap-2 mb-4">
-                    ${repo.topics.slice(0, 3).map(topic => `
+                    ${topics.slice(0, maxTopics).map(topic => `
                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
                             ${topic}
                         </span>
                     `).join('')}
-                    ${repo.topics.length > 3 ? `<span class="text-xs text-gray-500">+${repo.topics.length - 3} more</span>` : ''}
+                    ${topics.length > maxTopics ? `<span class="text-xs text-gray-500">+${topics.length - maxTopics} more</span>` : ''}
                 </div>
-                <a href="${repo.url}" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm">
+                ` : ''}
+                <a href="${repoLink}" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm">
                     View Project
                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
@@ -270,7 +231,8 @@ function renderProjects() {
                 </a>
             </div>
         </div>
-    `).join('');
+        `;
+    }).join('');
 
     // Add animation to cards
     const cards = document.querySelectorAll('.project-card');
@@ -305,24 +267,33 @@ function setupEventListeners() {
     }
 
     // Search functionality
-    searchInput.addEventListener('input', (e) => {
-        searchTerm = e.target.value;
-        renderProjects();
-    });
-
-    // Filter functionality
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => {
-                btn.classList.remove('active', 'bg-primary-600', 'text-white');
-                btn.classList.add('bg-gray-200', 'text-gray-700');
-            });
-            button.classList.remove('bg-gray-200', 'text-gray-700');
-            button.classList.add('active', 'bg-primary-600', 'text-white');
-            currentFilter = button.dataset.filter;
+    if (searchInput) {
+        searchInput.addEventListener('input', (e) => {
+            searchTerm = e.target.value;
             renderProjects();
         });
-    });
+    }
+
+    // Filter functionality - use event delegation for dynamically created buttons
+    let filterContainer = document.querySelector('div.flex.flex-wrap.gap-2');
+    if (!filterContainer) {
+        filterContainer = document.querySelector('.flex-wrap');
+    }
+    if (filterContainer) {
+        filterContainer.addEventListener('click', (e) => {
+            if (e.target.classList.contains('filter-btn')) {
+                const allFilterButtons = filterContainer.querySelectorAll('.filter-btn');
+                allFilterButtons.forEach(btn => {
+                    btn.classList.remove('active', 'bg-primary-600', 'text-white');
+                    btn.classList.add('bg-gray-200', 'text-gray-700');
+                });
+                e.target.classList.remove('bg-gray-200', 'text-gray-700');
+                e.target.classList.add('active', 'bg-primary-600', 'text-white');
+                currentFilter = e.target.dataset.filter;
+                renderProjects();
+            }
+        });
+    }
 
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
