@@ -59,20 +59,28 @@ function filterRepositories(repos) {
 // DOM elements - will be initialized after DOM loads
 let projectsGrid;
 let searchInput;
+let sortSelect;
+let projectCountElement;
+let lastUpdatedElement;
 
 // State
 let currentFilter = 'all';
 let searchTerm = '';
+let currentSort = 'stars';
 
 // Initialize the page
 document.addEventListener('DOMContentLoaded', async function () {
     // Initialize DOM elements
     projectsGrid = document.getElementById('projects-grid');
     searchInput = document.getElementById('search');
+    sortSelect = document.getElementById('sortSelect');
+    projectCountElement = document.getElementById('projectCount');
+    lastUpdatedElement = document.getElementById('lastUpdated');
 
     const dataLoaded = await loadData();
     if (dataLoaded) {
         updateFilterButtons();
+        updateProjectCount();
         renderProjects();
         setupEventListeners();
         setupScrollEffects();
@@ -139,19 +147,54 @@ function updateFilterButtons() {
     });
 }
 
+// Update project count display
+function updateProjectCount() {
+    if (projectCountElement) {
+        const totalProjects = repositories.length;
+        projectCountElement.textContent = `Showing ${totalProjects} of ${totalProjects} projects`;
+    }
+}
+
+// Sort repositories
+function sortRepositories(repos, sortBy) {
+    const sorted = [...repos];
+    switch (sortBy) {
+        case 'name':
+            return sorted.sort((a, b) => a.name.localeCompare(b.name));
+        case 'stars':
+            return sorted.sort((a, b) => (b.stars || 0) - (a.stars || 0));
+        case 'forks':
+            return sorted.sort((a, b) => (b.forks || 0) - (a.forks || 0));
+        case 'updated':
+            return sorted.sort((a, b) => new Date(b.updated_at || 0) - new Date(a.updated_at || 0));
+        default:
+            return sorted;
+    }
+}
+
 // Render projects
 function renderProjects() {
     if (!projectsGrid) {
         return;
     }
 
-    const filteredRepos = repositories.filter(repo => {
+    let filteredRepos = repositories.filter(repo => {
         const matchesFilter = currentFilter === 'all' || repo.category === currentFilter;
         const matchesSearch = repo.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
             (repo.description && repo.description.toLowerCase().includes(searchTerm.toLowerCase())) ||
             (repo.topics && repo.topics.some(topic => topic.toLowerCase().includes(searchTerm.toLowerCase())));
         return matchesFilter && matchesSearch;
     });
+
+    // Sort the filtered repositories
+    filteredRepos = sortRepositories(filteredRepos, currentSort);
+
+    // Update project count
+    if (projectCountElement) {
+        const totalVisible = filteredRepos.length;
+        const totalAll = repositories.length;
+        projectCountElement.textContent = `Showing ${totalVisible} of ${totalAll} projects`;
+    }
 
     if (filteredRepos.length === 0) {
         projectsGrid.innerHTML = `
@@ -173,11 +216,13 @@ function renderProjects() {
 
         // Determine the link destination - prefer GitHub Pages if available
         const projectLink = repo.has_pages && repo.pages_url ? repo.pages_url : repo.url;
-        const repoLink = repo.url; // Always link to repository for "View Project"
+        const repoLink = repo.url; // Always link to repository for "View Repo"
 
         return `
-        <div class="project-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1" data-category="${repo.category}">
-            <div class="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden">
+        <div class="project-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-all duration-300 hover:-translate-y-1 flex flex-col h-full"
+            data-category="${repo.category}" style="opacity: 1; transform: translateY(0px); transition: 0.5s;">
+            <div class="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 relative overflow-hidden cursor-pointer"
+                onclick="window.open('${projectLink}', '_blank')">
                 <img src="${repo.image}" alt="${repo.name}" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                 <div class="absolute top-4 right-4">
@@ -185,35 +230,44 @@ function renderProjects() {
                         ${language}
                     </span>
                 </div>
+                ${repo.has_pages && repo.pages_url ? `
+                <div class="absolute top-4 left-4">
+                    <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                        <svg class="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Live
+                    </span>
+                </div>
+                ` : ''}
             </div>
-            <div class="p-6">
+            <div class="p-6 flex flex-col flex-grow">
                 <div class="flex items-start justify-between mb-3">
-                    <h3 class="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors">
-                        <a href="${projectLink}" target="_blank">${repo.name}</a>
+                    <h3 class="text-lg font-semibold text-gray-900 hover:text-primary-600 transition-colors cursor-pointer"
+                        onclick="window.open('${projectLink}', '_blank')">
+                        ${repo.name}
                     </h3>
-                    ${displayConfig.showStarCount !== false || displayConfig.showForkCount !== false ? `
-                    <div class="flex items-center space-x-3 text-sm text-gray-500">
-                        ${displayConfig.showStarCount !== false ? `
+                    <div class="flex items-center space-x-3 text-sm text-gray-500 flex-shrink-0">
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
                             </svg>
                             ${formatNumber(repo.stars)}
                         </span>
-                        ` : ''}
-                        ${displayConfig.showForkCount !== false ? `
                         <span class="flex items-center">
                             <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                                <path fill-rule="evenodd" d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414L2.586 7l3.707-3.707a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                                <path fill-rule="evenodd"
+                                    d="M7.707 3.293a1 1 0 010 1.414L5.414 7H11a7 7 0 017 7v2a1 1 0 11-2 0v-2a5 5 0 00-5-5H5.414l2.293 2.293a1 1 0 11-1.414 1.414L2.586 7l3.707-3.707a1 1 0 011.414 0z"
+                                    clip-rule="evenodd"></path>
                             </svg>
                             ${formatNumber(repo.forks)}
                         </span>
-                        ` : ''}
                     </div>
-                    ` : ''}
                 </div>
-                <p class="text-gray-600 text-sm mb-4 line-clamp-3">${description}</p>
-                ${displayConfig.showTopics !== false && topics.length > 0 ? `
+                <p class="text-gray-600 text-sm mb-4 flex-grow">${description}</p>
+                ${topics.length > 0 ? `
                 <div class="flex flex-wrap gap-2 mb-4">
                     ${topics.slice(0, maxTopics).map(topic => `
                         <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-primary-50 text-primary-700">
@@ -223,12 +277,28 @@ function renderProjects() {
                     ${topics.length > maxTopics ? `<span class="text-xs text-gray-500">+${topics.length - maxTopics} more</span>` : ''}
                 </div>
                 ` : ''}
-                <a href="${repoLink}" target="_blank" class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm">
-                    View Project
-                    <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-                    </svg>
-                </a>
+                <div class="flex justify-between items-center mt-auto">
+                    ${repo.has_pages && repo.pages_url ? `
+                    <a href="${repo.pages_url}" target="_blank"
+                        class="inline-flex items-center text-green-600 hover:text-green-700 font-medium text-sm">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                        Live Demo
+                    </a>
+                    ` : '<div></div>'}
+                    <a href="${repoLink}" target="_blank"
+                        class="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm">
+                        View Repo
+                        <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
             </div>
         </div>
         `;
@@ -270,6 +340,14 @@ function setupEventListeners() {
     if (searchInput) {
         searchInput.addEventListener('input', (e) => {
             searchTerm = e.target.value;
+            renderProjects();
+        });
+    }
+
+    // Sort functionality
+    if (sortSelect) {
+        sortSelect.addEventListener('change', (e) => {
+            currentSort = e.target.value;
             renderProjects();
         });
     }
