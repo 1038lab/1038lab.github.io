@@ -1,24 +1,209 @@
 {
-  "repositories": [],
-  "news": [
+  "repositories": [
     {
-      "title": "ComfyUI-RMBG Major Update",
-      "description": "New models and improved performance for background removal tasks.",
-      "date": "2024-12-20",
-      "type": "update",
-      "url": "https://github.com/1038lab/ComfyUI-RMBG"
+      "name": "ComfyUI-RMBG",
+      "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet...",
+      "stars": 1081,
+      "forks": 44,
+      "language": "Python",
+      "topics": ["image-processing", "background-removal", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-RMBG",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-RMBG",
+      "category": "image",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
-      "title": "New AI Model Integration",
-      "description": "We've integrated cutting-edge AI models across our ComfyUI ecosystem for enhanced performance.",
-      "date": "2024-12-15",
+      "name": "ComfyUI-OmniGen",
+      "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
+      "stars": 275,
+      "forks": 22,
+      "language": "Python",
+      "topics": ["text-to-image", "omnigen", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-OmniGen",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-OmniGen",
+      "category": "ai",
+      "featured": true,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-SparkTTS",
+      "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
+      "stars": 105,
+      "forks": 10,
+      "language": "Python",
+      "topics": ["tts", "text-to-speech", "comfyui", "sparktts"],
+      "url": "https://github.com/1038lab/ComfyUI-SparkTTS",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-SparkTTS",
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-ReduxFineTune",
+      "description": "ComfyUI-ReduxFineTune is a custom node for ComfyUI that enables advanced style fine-tuning using the Flux Redux approach. It offers multiple unified fusion modes for precise and consistent control over style transfer.",
+      "stars": 53,
+      "forks": 3,
+      "language": "Python",
+      "topics": ["redux", "flux", "custom-nodes", "comfyui"],
+      "url": "https://github.com/1038lab/ComfyUI-ReduxFineTune",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-ReduxFineTune",
+      "category": "ai",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-EdgeTTS",
+      "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices.",
+      "stars": 46,
+      "forks": 6,
+      "language": "Python",
+      "topics": ["tts", "edge-tts", "comfyui", "microsoft"],
+      "url": "https://github.com/1038lab/ComfyUI-EdgeTTS",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-EdgeTTS",
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-LBM",
+      "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
+      "stars": 46,
+      "forks": 1,
+      "language": "Python",
+      "topics": ["image-relighting", "lbm", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-LBM",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-LBM",
+      "category": "image",
+      "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-MegaTTS",
+      "description": "A ComfyUI custom node based on ByteDance MegaTTS3, enabling high-quality text-to-speech synthesis with voice cloning capabilities for both Chinese and English.",
+      "stars": 42,
+      "forks": 3,
+      "language": "Python",
+      "topics": ["tts", "megatts", "voice-cloning", "comfyui"],
+      "url": "https://github.com/1038lab/ComfyUI-MegaTTS",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-MegaTTS",
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-WildPromptor",
+      "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
+      "stars": 36,
+      "forks": 7,
+      "language": "Python",
+      "topics": ["prompt-engineering", "comfyui", "workflow", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-WildPromptor",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-WildPromptor",
+      "category": "workflow",
+      "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-MiniMax-Remover",
+      "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified loss function, then applies advanced optimization techniques.",
+      "stars": 35,
+      "forks": 3,
+      "language": "Python",
+      "topics": ["python", "remover", "comfyui", "customnodes"],
+      "url": "https://github.com/1038lab/ComfyUI-MiniMax-Remover",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-MiniMax-Remover",
+      "category": "image",
+      "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-Pollinations",
+      "description": "pollinations API AI Generations - A ComfyUI custom node for accessing Pollinations AI generation services.",
+      "stars": 34,
+      "forks": 5,
+      "language": "Python",
+      "topics": ["pollinations", "ai-generation", "comfyui", "api"],
+      "url": "https://github.com/1038lab/ComfyUI-Pollinations",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-Pollinations",
+      "category": "ai",
+      "image": "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-JoyCaption",
+      "description": "Joy Caption is a ComfyUI custom node powered by the LLaVA model for efficient, stylized image captioning. Caption Tools nodes handle batch image processing and automatic separation of caption text.",
+      "stars": 19,
+      "forks": 1,
+      "language": "Python",
+      "topics": ["image-captioning", "llava", "comfyui", "ai"],
+      "url": "https://github.com/1038lab/ComfyUI-JoyCaption",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-JoyCaption",
+      "category": "ai",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-KokoroTTS",
+      "description": "ComfyUI-KokoroTTS: A text-to-speech model that utilizes the Kokoro TTS framework to convert text into natural-sounding speech. It supports multiple voices and languages.",
+      "stars": 12,
+      "forks": 2,
+      "language": "Python",
+      "topics": ["tts", "kokoro", "comfyui", "multilingual"],
+      "url": "https://github.com/1038lab/ComfyUI-KokoroTTS",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-KokoroTTS",
+      "category": "audio",
+      "image": "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-Blip",
+      "description": "A lightweight and high-speed ComfyUI custom node for generating image captions using BLIP models. Optimized for both GPU and CPU environments to deliver fast and efficient caption generation.",
+      "stars": 4,
+      "forks": 1,
+      "language": "Python",
+      "topics": ["img2txt", "custom-nodes", "comfyui", "blip"],
+      "url": "https://github.com/1038lab/ComfyUI-Blip",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io/ComfyUI-Blip",
+      "category": "ai",
+      "image": "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "1038lab.github.io",
+      "description": "Official website showcasing AILab's innovative AI solutions and ComfyUI custom nodes.",
+      "stars": 0,
+      "forks": 0,
+      "language": "HTML",
+      "topics": ["website", "portfolio", "github-pages"],
+      "url": "https://github.com/1038lab/1038lab.github.io",
+      "has_pages": true,
+      "pages_url": "https://1038lab.github.io",
+      "category": "web",
+      "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    }
+  ],
+  "news": [
+    {
+      "title": "Website Update",
+      "description": "Our website now supports automatic repository data updates!",
+      "date": "2023-05-15",
       "type": "announcement",
       "url": "https://github.com/1038lab"
     },
     {
+      "title": "ComfyUI-RMBG Major Update",
+      "description": "New models and improved performance for background removal tasks.",
+      "date": "2023-05-10",
+      "type": "update",
+      "url": "https://github.com/1038lab/ComfyUI-RMBG"
+    },
+    {
       "title": "Community Milestone",
       "description": "Our projects have reached over 1,000 stars! Thank you for your continued support.",
-      "date": "2024-12-10",
+      "date": "2023-05-01",
       "type": "milestone",
       "url": "https://github.com/1038lab"
     }
@@ -29,42 +214,37 @@
       "ComfyUI-Manager"
     ],
     "categories": {
-      "audio": {
-        "name": "Audio Processing",
-        "description": "Speech synthesis and text-to-speech technologies",
-        "color": "blue"
+      "ai": {
+        "name": "AI",
+        "description": "Artificial intelligence and machine learning tools",
+        "color": "purple"
       },
       "image": {
-        "name": "Image Processing",
+        "name": "Image",
         "description": "Image processing and computer vision",
         "color": "green"
       },
-      "ai": {
-        "name": "AI & ML",
-        "description": "Artificial intelligence and machine learning",
-        "color": "purple"
+      "audio": {
+        "name": "Audio",
+        "description": "Audio processing and speech technologies",
+        "color": "blue"
       },
       "text": {
-        "name": "Text Processing",
+        "name": "Text",
         "description": "Natural language processing and text analysis",
         "color": "indigo"
       },
       "workflow": {
-        "name": "Workflow Tools",
+        "name": "Workflow",
         "description": "Automation and workflow management tools",
         "color": "pink"
       },
       "web": {
-        "name": "Web & Tools",
+        "name": "Web",
         "description": "Website development and tools",
-        "color": "gray"
+        "color": "orange"
       }
-    },
-    "contact": {
-      "email": "contact@1038lab.com",
-      "github": "https://github.com/1038lab",
-      "sponsors": "https://github.com/sponsors/1038lab"
     }
   },
-  "lastUpdated": "2025-07-10T17:28:09.780Z"
+  "lastUpdated": "2023-05-15T12:00:00Z"
 }
