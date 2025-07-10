@@ -24,6 +24,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["text-to-image", "omnigen", "comfyui", "ai"],
         url: "https://github.com/1038lab/ComfyUI-OmniGen",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-OmniGen",
         category: "ai",
         image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -35,6 +37,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["tts", "text-to-speech", "comfyui", "sparktts"],
         url: "https://github.com/1038lab/ComfyUI-SparkTTS",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-SparkTTS",
         category: "tts",
         image: "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -46,6 +50,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["redux", "flux", "custom-nodes", "comfyui"],
         url: "https://github.com/1038lab/ComfyUI-ReduxFineTune",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-ReduxFineTune",
         category: "ai",
         image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -57,6 +63,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["tts", "edge-tts", "comfyui", "microsoft"],
         url: "https://github.com/1038lab/ComfyUI-EdgeTTS",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-EdgeTTS",
         category: "tts",
         image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -68,6 +76,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["image-relighting", "lbm", "comfyui", "ai"],
         url: "https://github.com/1038lab/ComfyUI-LBM",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-LBM",
         category: "image",
         image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -79,6 +89,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["tts", "megatts", "voice-cloning", "comfyui"],
         url: "https://github.com/1038lab/ComfyUI-MegaTTS",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-MegaTTS",
         category: "tts",
         image: "https://images.unsplash.com/photo-1516280440614-37939bbacd81?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -90,6 +102,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["prompt-engineering", "comfyui", "workflow", "ai"],
         url: "https://github.com/1038lab/ComfyUI-WildPromptor",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-WildPromptor",
         category: "ai",
         image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -101,6 +115,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["python", "remover", "comfyui", "customnodes"],
         url: "https://github.com/1038lab/ComfyUI-MiniMax-Remover",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-MiniMax-Remover",
         category: "image",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -112,6 +128,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["pollinations", "ai-generation", "comfyui", "api"],
         url: "https://github.com/1038lab/ComfyUI-Pollinations",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-Pollinations",
         category: "ai",
         image: "https://images.unsplash.com/photo-1547036967-23d11aacaee0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -123,6 +141,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["image-captioning", "llava", "comfyui", "ai"],
         url: "https://github.com/1038lab/ComfyUI-JoyCaption",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-JoyCaption",
         category: "ai",
         image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -134,6 +154,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["tts", "kokoro", "comfyui", "multilingual"],
         url: "https://github.com/1038lab/ComfyUI-KokoroTTS",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-KokoroTTS",
         category: "tts",
         image: "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -145,6 +167,8 @@ const staticRepositories = [
         language: "Python",
         topics: ["img2txt", "custom-nodes", "comfyui", "blip"],
         url: "https://github.com/1038lab/ComfyUI-Blip",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io/ComfyUI-Blip",
         category: "ai",
         image: "https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
@@ -156,6 +180,8 @@ const staticRepositories = [
         language: "HTML",
         topics: ["website", "portfolio", "github-pages"],
         url: "https://github.com/1038lab/1038lab.github.io",
+        has_pages: true,
+        pages_url: "https://1038lab.github.io",
         category: "web",
         image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
