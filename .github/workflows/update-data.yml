@@ -26,7 +26,8 @@ jobs:
       - name: Update repository data
         run: node .github/scripts/update-data.js
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
           
       - name: Commit and push if changed
         run: |
