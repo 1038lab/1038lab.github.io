@@ -6,13 +6,16 @@
   },
   "repositories": {
     "hiddenRepos": [
-      "ComfyUI-Manager"
+      "ComfyUI-Manager",
+      "i18n-Translator"
     ],
     "featuredRepos": [
       "ComfyUI-RMBG",
       "ComfyUI-SparkTTS",
-      "ComfyUI-OmniGen",
-      "ComfyUI-ReduxFineTune"
+      "ComfyUI-WildPromptor",
+      "ComfyUI-ReduxFineTune",
+      "ComfyUI-ReduxFineTune",
+      "ComfyUI-MiniMax-Remover"
     ],
     "filters": {
       "hideForks": true,
