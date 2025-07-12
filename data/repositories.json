@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 50,
+      "stars": 51,
       "forks": 3,
       "language": "Python",
       "topics": [
@@ -72,7 +72,7 @@
       "has_pages": false,
       "pages_url": "",
       "category": "ai",
-      "featured": false,
+      "featured": true,
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -96,7 +96,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI custom node powered by the LLaVA model for efficient, stylized image captioning. Caption Tools nodes handle batch image processing and automatic separation of caption text.",
-      "stars": 23,
+      "stars": 24,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -180,7 +180,7 @@
     {
       "name": "ComfyUI-Pollinations",
       "description": "pollinations API AI Generations",
-      "stars": 36,
+      "stars": 37,
       "forks": 5,
       "language": "Python",
       "topics": [],
@@ -225,7 +225,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1140,
+      "stars": 1141,
       "forks": 46,
       "language": "Python",
       "topics": [
@@ -272,5 +272,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-11T06:13:06.818Z"
+  "lastUpdated": "2025-07-12T06:00:34.621Z"
 }
