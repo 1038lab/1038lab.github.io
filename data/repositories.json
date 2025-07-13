@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 51,
+      "stars": 52,
       "forks": 3,
       "language": "Python",
       "topics": [
@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 50,
+      "stars": 51,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -118,7 +118,7 @@
       "has_pages": true,
       "pages_url": "https://1038lab.github.io/ComfyUI-LBM",
       "category": "ai",
-      "featured": false,
+      "featured": true,
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -225,8 +225,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1141,
-      "forks": 46,
+      "stars": 1143,
+      "forks": 47,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -261,7 +261,7 @@
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
       "stars": 37,
-      "forks": 7,
+      "forks": 8,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-WildPromptor",
@@ -272,5 +272,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-12T06:00:34.621Z"
+  "lastUpdated": "2025-07-13T06:11:31.629Z"
 }
