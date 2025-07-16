@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 51,
+      "stars": 53,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -161,7 +161,7 @@
     {
       "name": "ComfyUI-SparkTTS",
       "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
-      "stars": 105,
+      "stars": 106,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -225,7 +225,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1147,
+      "stars": 1149,
       "forks": 47,
       "language": "Python",
       "topics": [
@@ -272,5 +272,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-15T06:13:29.793Z"
+  "lastUpdated": "2025-07-16T06:13:26.044Z"
 }
