@@ -78,7 +78,7 @@
     {
       "name": "ComfyUI-Blip",
       "description": "A lightweight and high-speed ComfyUI custom node for generating image captions using BLIP models. Optimized for both GPU and CPU environments to deliver fast and efficient caption generation.",
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -96,7 +96,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI custom node powered by the LLaVA model for efficient, stylized image captioning. Caption Tools nodes handle batch image processing and automatic separation of caption text.",
-      "stars": 26,
+      "stars": 28,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 53,
+      "stars": 54,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -225,7 +225,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1174,
+      "stars": 1177,
       "forks": 48,
       "language": "Python",
       "topics": [
@@ -272,5 +272,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-18T06:13:14.261Z"
+  "lastUpdated": "2025-07-19T06:00:31.206Z"
 }
