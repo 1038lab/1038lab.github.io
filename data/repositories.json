@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 54,
+      "stars": 55,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -225,7 +225,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1177,
+      "stars": 1179,
       "forks": 48,
       "language": "Python",
       "topics": [
@@ -272,5 +272,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-20T06:00:33.223Z"
+  "lastUpdated": "2025-07-21T06:14:25.652Z"
 }
