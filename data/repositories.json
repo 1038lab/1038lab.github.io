@@ -1,6 +1,20 @@
 {
   "repositories": [
     {
+      "name": "Safetensors-Converter",
+      "description": "A robust and comprehensive Python tool to convert various AI model formats to `.safetensors` format with advanced error handling and validation.",
+      "stars": 1,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/Safetensors-Converter",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-Mosaic",
       "description": "",
       "stars": 1,
@@ -96,7 +110,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI custom node powered by the LLaVA model for efficient, stylized image captioning. Caption Tools nodes handle batch image processing and automatic separation of caption text.",
-      "stars": 32,
+      "stars": 34,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -225,7 +239,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1206,
+      "stars": 1207,
       "forks": 50,
       "language": "Python",
       "topics": [
@@ -272,5 +286,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-28T06:15:48.982Z"
+  "lastUpdated": "2025-07-29T06:16:45.734Z"
 }
