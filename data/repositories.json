@@ -45,7 +45,7 @@
     {
       "name": "1038lab.github.io",
       "description": "",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "language": "JavaScript",
       "topics": [],
@@ -157,7 +157,7 @@
     {
       "name": "ComfyUI-MegaTTS",
       "description": "A ComfyUI custom node based on ByteDance MegaTTS3, enabling high-quality text-to-speech synthesis with voice cloning capabilities for both Chinese and English.",
-      "stars": 42,
+      "stars": 44,
       "forks": 3,
       "language": "Python",
       "topics": [
@@ -239,8 +239,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet models, SAM, and GroundingDINO.",
-      "stars": 1218,
-      "forks": 52,
+      "stars": 1220,
+      "forks": 53,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -286,5 +286,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-07-31T06:13:57.123Z"
+  "lastUpdated": "2025-08-01T06:16:01.148Z"
 }
