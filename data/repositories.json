@@ -109,11 +109,17 @@
     },
     {
       "name": "ComfyUI-JoyCaption",
-      "description": "Joy Caption is a ComfyUI custom node powered by the LLaVA model for efficient, stylized image captioning. Caption Tools nodes handle batch image processing and automatic separation of caption text.",
-      "stars": 56,
+      "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
+      "stars": 58,
       "forks": 4,
       "language": "Python",
-      "topics": [],
+      "topics": [
+        "comfyui",
+        "gguf",
+        "joycaption",
+        "stable-diffusion",
+        "transfromers"
+      ],
       "url": "https://github.com/1038lab/ComfyUI-JoyCaption",
       "has_pages": true,
       "pages_url": "https://1038lab.github.io/ComfyUI-JoyCaption",
@@ -175,7 +181,7 @@
     {
       "name": "ComfyUI-SparkTTS",
       "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
-      "stars": 111,
+      "stars": 113,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -239,7 +245,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1268,
+      "stars": 1273,
       "forks": 56,
       "language": "Python",
       "topics": [
@@ -287,5 +293,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-08-22T06:00:42.775Z"
+  "lastUpdated": "2025-08-23T06:01:00.143Z"
 }
