@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 59,
+      "stars": 61,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -130,7 +130,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 58,
+      "stars": 59,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -181,7 +181,7 @@
     {
       "name": "ComfyUI-SparkTTS",
       "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
-      "stars": 113,
+      "stars": 114,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -245,7 +245,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1276,
+      "stars": 1281,
       "forks": 56,
       "language": "Python",
       "topics": [
@@ -281,7 +281,7 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 41,
+      "stars": 42,
       "forks": 8,
       "language": "Python",
       "topics": [],
@@ -293,5 +293,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-08-24T06:11:13.793Z"
+  "lastUpdated": "2025-08-25T06:13:50.775Z"
 }
