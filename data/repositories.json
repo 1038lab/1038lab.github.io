@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 61,
+      "stars": 63,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -130,7 +130,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 59,
+      "stars": 60,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -200,7 +200,7 @@
     {
       "name": "ComfyUI-Pollinations",
       "description": "pollinations API AI Generations",
-      "stars": 42,
+      "stars": 43,
       "forks": 5,
       "language": "Python",
       "topics": [],
@@ -245,7 +245,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1281,
+      "stars": 1286,
       "forks": 56,
       "language": "Python",
       "topics": [
@@ -267,7 +267,7 @@
     {
       "name": "ComfyUI-OmniGen",
       "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
-      "stars": 284,
+      "stars": 285,
       "forks": 21,
       "language": "Python",
       "topics": [],
@@ -293,5 +293,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-08-25T06:13:50.775Z"
+  "lastUpdated": "2025-08-26T06:00:34.632Z"
 }
