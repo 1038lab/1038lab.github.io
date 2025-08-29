@@ -110,7 +110,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 68,
+      "stars": 71,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -162,8 +162,8 @@
     },
     {
       "name": "ComfyUI-MiniCPM",
-      "description": "A ComfyUI custom node for MiniCPM vision-language models, enabling high-quality image captioning and analysis.",
-      "stars": 9,
+      "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
+      "stars": 13,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -251,7 +251,7 @@
     {
       "name": "ComfyUI-EdgeTTS",
       "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices. Ideal for enhancing user interactions, this node is easy to integrate and customize, making it perfect for various applications.",
-      "stars": 50,
+      "stars": 51,
       "forks": 7,
       "language": "Python",
       "topics": [
@@ -262,7 +262,7 @@
       "has_pages": true,
       "pages_url": "https://1038lab.github.io/ComfyUI-EdgeTTS",
       "category": "audio",
-      "featured": false,
+      "featured": true,
       "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -316,5 +316,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-08-28T06:00:43.432Z"
+  "lastUpdated": "2025-08-29T06:01:04.273Z"
 }
