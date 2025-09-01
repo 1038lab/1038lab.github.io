@@ -163,7 +163,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 44,
+      "stars": 48,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -268,7 +268,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1289,
+      "stars": 1290,
       "forks": 56,
       "language": "Python",
       "topics": [
@@ -316,5 +316,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-08-31T06:00:44.352Z"
+  "lastUpdated": "2025-09-01T06:14:18.069Z"
 }
