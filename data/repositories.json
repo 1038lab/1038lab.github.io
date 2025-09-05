@@ -73,7 +73,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 57,
+      "stars": 58,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -110,8 +110,8 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 75,
-      "forks": 7,
+      "stars": 76,
+      "forks": 6,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -130,7 +130,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 61,
+      "stars": 62,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -223,7 +223,7 @@
     {
       "name": "ComfyUI-Pollinations",
       "description": "pollinations API AI Generations",
-      "stars": 43,
+      "stars": 42,
       "forks": 5,
       "language": "Python",
       "topics": [],
@@ -268,7 +268,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1299,
+      "stars": 1301,
       "forks": 57,
       "language": "Python",
       "topics": [
@@ -304,7 +304,7 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 44,
+      "stars": 46,
       "forks": 8,
       "language": "Python",
       "topics": [],
@@ -316,5 +316,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-04T06:00:43.655Z"
+  "lastUpdated": "2025-09-05T06:00:47.809Z"
 }
