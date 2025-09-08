@@ -3,7 +3,7 @@
     {
       "name": "Gemini-APPs",
       "description": "showcase of creative and useful applications built with the Google Gemini API.",
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "language": "HTML",
       "topics": [
@@ -93,7 +93,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 59,
+      "stars": 60,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -150,7 +150,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 62,
+      "stars": 72,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -183,7 +183,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 71,
+      "stars": 75,
       "forks": 2,
       "language": "Python",
       "topics": [
@@ -288,7 +288,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1312,
+      "stars": 1313,
       "forks": 58,
       "language": "Python",
       "topics": [
@@ -336,5 +336,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-07T06:00:43.348Z"
+  "lastUpdated": "2025-09-08T06:00:52.371Z"
 }
