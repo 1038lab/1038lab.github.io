@@ -3,7 +3,7 @@
     {
       "name": "Gemini-APPs",
       "description": "showcase of creative and useful applications built with the Google Gemini API.",
-      "stars": 10,
+      "stars": 12,
       "forks": 2,
       "language": "HTML",
       "topics": [
@@ -130,7 +130,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 81,
+      "stars": 82,
       "forks": 8,
       "language": "Python",
       "topics": [
@@ -183,7 +183,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 88,
+      "stars": 90,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -288,8 +288,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1329,
-      "forks": 58,
+      "stars": 1332,
+      "forks": 59,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -336,5 +336,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-13T06:00:49.954Z"
+  "lastUpdated": "2025-09-14T06:00:47.298Z"
 }
