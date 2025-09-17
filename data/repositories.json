@@ -2,11 +2,17 @@
   "repositories": [
     {
       "name": "ComfyUI-FireRedTTS",
-      "description": "ComfyUI-FireRedTTS, A ComfyUI integration for FireRedTTS2, providing high-quality dialogue and monologue speech synthesis capabilities.",
-      "stars": 0,
-      "forks": 0,
+      "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
+      "stars": 3,
+      "forks": 1,
       "language": "Python",
-      "topics": [],
+      "topics": [
+        "comfyui",
+        "customnodes",
+        "fireredtts",
+        "fireredtts2",
+        "tts"
+      ],
       "url": "https://github.com/1038lab/ComfyUI-FireRedTTS",
       "has_pages": false,
       "pages_url": "",
@@ -145,7 +151,7 @@
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
       "stars": 88,
-      "forks": 8,
+      "forks": 9,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -238,7 +244,7 @@
     {
       "name": "ComfyUI-SparkTTS",
       "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
-      "stars": 115,
+      "stars": 116,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -302,8 +308,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1340,
-      "forks": 59,
+      "stars": 1345,
+      "forks": 60,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -338,8 +344,8 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 47,
-      "forks": 8,
+      "stars": 48,
+      "forks": 9,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-WildPromptor",
@@ -350,5 +356,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-16T06:00:52.019Z"
+  "lastUpdated": "2025-09-17T06:00:55.180Z"
 }
