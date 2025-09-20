@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
-      "stars": 4,
+      "stars": 5,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -132,7 +132,7 @@
     {
       "name": "ComfyUI-Blip",
       "description": "A lightweight and high-speed ComfyUI custom node for generating image captions using BLIP models. Optimized for both GPU and CPU environments to deliver fast and efficient caption generation.",
-      "stars": 7,
+      "stars": 8,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -150,7 +150,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 88,
+      "stars": 89,
       "forks": 9,
       "language": "Python",
       "topics": [
@@ -203,8 +203,8 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 93,
-      "forks": 7,
+      "stars": 95,
+      "forks": 8,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -308,7 +308,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1350,
+      "stars": 1355,
       "forks": 59,
       "language": "Python",
       "topics": [
@@ -356,5 +356,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-19T06:00:50.153Z"
+  "lastUpdated": "2025-09-20T06:00:51.397Z"
 }
