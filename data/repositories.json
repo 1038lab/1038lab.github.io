@@ -1,9 +1,29 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-VoxCPMTTS",
+      "description": "A clean, efficient ComfyUI custom node for VoxCPM TTS (Text-to-Speech) functionality. This implementation provides high-quality speech generation and voice cloning capabilities using the VoxCPM model.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [
+        "comfyui",
+        "customnodes",
+        "python",
+        "tts",
+        "voxcpm"
+      ],
+      "url": "https://github.com/1038lab/ComfyUI-VoxCPMTTS",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "audio",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1589254065878-42c9da997008?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
-      "stars": 11,
+      "stars": 27,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -150,7 +170,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 93,
+      "stars": 96,
       "forks": 10,
       "language": "Python",
       "topics": [
@@ -184,7 +204,7 @@
     {
       "name": "ComfyUI-ReduxFineTune",
       "description": "ComfyUI-ReduxFineTune is a custom node for ComfyUI that enables advanced style fine-tuning using the Flux Redux approach. It offers multiple unified fusion modes for precise and consistent control over style transfer, allowing users to fine-tune image styles with high flexibility and detail.",
-      "stars": 63,
+      "stars": 64,
       "forks": 3,
       "language": "Python",
       "topics": [
@@ -203,8 +223,8 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 99,
-      "forks": 8,
+      "stars": 100,
+      "forks": 9,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -308,7 +328,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1363,
+      "stars": 1368,
       "forks": 59,
       "language": "Python",
       "topics": [
@@ -330,7 +350,7 @@
     {
       "name": "ComfyUI-OmniGen",
       "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
-      "stars": 289,
+      "stars": 290,
       "forks": 21,
       "language": "Python",
       "topics": [],
@@ -356,5 +376,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-23T06:01:02.832Z"
+  "lastUpdated": "2025-09-24T06:01:00.050Z"
 }
