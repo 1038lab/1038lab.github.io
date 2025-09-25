@@ -3,8 +3,8 @@
     {
       "name": "ComfyUI-VoxCPMTTS",
       "description": "A clean, efficient ComfyUI custom node for VoxCPM TTS (Text-to-Speech) functionality. This implementation provides high-quality speech generation and voice cloning capabilities using the VoxCPM model.",
-      "stars": 0,
-      "forks": 0,
+      "stars": 1,
+      "forks": 1,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -23,7 +23,7 @@
     {
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
-      "stars": 27,
+      "stars": 31,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -190,7 +190,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 74,
+      "stars": 75,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -223,7 +223,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 100,
+      "stars": 102,
       "forks": 9,
       "language": "Python",
       "topics": [
@@ -328,8 +328,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1368,
-      "forks": 59,
+      "stars": 1370,
+      "forks": 60,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -376,5 +376,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-09-24T06:01:00.050Z"
+  "lastUpdated": "2025-09-25T06:00:50.493Z"
 }
