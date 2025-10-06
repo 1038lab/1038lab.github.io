@@ -170,7 +170,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 103,
+      "stars": 104,
       "forks": 10,
       "language": "Python",
       "topics": [
@@ -223,8 +223,8 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 110,
-      "forks": 9,
+      "stars": 111,
+      "forks": 10,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -328,8 +328,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1386,
-      "forks": 62,
+      "stars": 1388,
+      "forks": 63,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -376,5 +376,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-05T06:00:36.174Z"
+  "lastUpdated": "2025-10-06T06:00:45.904Z"
 }
