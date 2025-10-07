@@ -247,7 +247,7 @@
       "name": "ComfyUI-MegaTTS",
       "description": "A ComfyUI custom node based on ByteDance MegaTTS3, enabling high-quality text-to-speech synthesis with voice cloning capabilities for both Chinese and English.",
       "stars": 49,
-      "forks": 4,
+      "forks": 5,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -283,7 +283,7 @@
     {
       "name": "ComfyUI-Pollinations",
       "description": "pollinations API AI Generations",
-      "stars": 43,
+      "stars": 44,
       "forks": 5,
       "language": "Python",
       "topics": [],
@@ -328,7 +328,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1388,
+      "stars": 1389,
       "forks": 63,
       "language": "Python",
       "topics": [
@@ -365,7 +365,7 @@
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
       "stars": 50,
-      "forks": 9,
+      "forks": 10,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-WildPromptor",
@@ -376,5 +376,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-06T06:00:45.904Z"
+  "lastUpdated": "2025-10-07T06:00:51.868Z"
 }
