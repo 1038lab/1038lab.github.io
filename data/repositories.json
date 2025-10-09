@@ -133,7 +133,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 63,
+      "stars": 64,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -376,5 +376,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-08T06:00:58.744Z"
+  "lastUpdated": "2025-10-09T06:01:15.147Z"
 }
