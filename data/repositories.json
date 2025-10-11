@@ -24,7 +24,7 @@
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
       "stars": 37,
-      "forks": 1,
+      "forks": 2,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -170,7 +170,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 105,
+      "stars": 106,
       "forks": 9,
       "language": "Python",
       "topics": [
@@ -265,7 +265,7 @@
       "name": "ComfyUI-SparkTTS",
       "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
       "stars": 118,
-      "forks": 13,
+      "forks": 12,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -311,7 +311,7 @@
     {
       "name": "ComfyUI-EdgeTTS",
       "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices. Ideal for enhancing user interactions, this node is easy to integrate and customize, making it perfect for various applications.",
-      "stars": 54,
+      "stars": 55,
       "forks": 7,
       "language": "Python",
       "topics": [
@@ -328,7 +328,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1398,
+      "stars": 1400,
       "forks": 62,
       "language": "Python",
       "topics": [
@@ -376,5 +376,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-10T06:00:56.311Z"
+  "lastUpdated": "2025-10-11T06:00:55.104Z"
 }
