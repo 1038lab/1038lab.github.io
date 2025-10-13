@@ -170,7 +170,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 106,
+      "stars": 108,
       "forks": 9,
       "language": "Python",
       "topics": [
@@ -190,7 +190,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 75,
+      "stars": 76,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -328,7 +328,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1403,
+      "stars": 1407,
       "forks": 62,
       "language": "Python",
       "topics": [
@@ -364,7 +364,7 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 50,
+      "stars": 51,
       "forks": 9,
       "language": "Python",
       "topics": [],
@@ -372,9 +372,9 @@
       "has_pages": true,
       "pages_url": "https://1038lab.github.io/ComfyUI-WildPromptor",
       "category": "ai",
-      "featured": false,
+      "featured": true,
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-12T06:00:48.733Z"
+  "lastUpdated": "2025-10-13T06:00:43.190Z"
 }
