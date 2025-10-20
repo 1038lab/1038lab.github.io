@@ -23,7 +23,7 @@
     {
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
-      "stars": 37,
+      "stars": 39,
       "forks": 2,
       "language": "Python",
       "topics": [
@@ -133,7 +133,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 64,
+      "stars": 65,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -264,8 +264,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 76,
-      "forks": 3,
+      "stars": 108,
+      "forks": 5,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -347,7 +347,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1419,
+      "stars": 1420,
       "forks": 63,
       "language": "Python",
       "topics": [
@@ -395,5 +395,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-19T06:00:54.050Z"
+  "lastUpdated": "2025-10-20T06:01:03.001Z"
 }
