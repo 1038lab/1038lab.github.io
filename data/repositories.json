@@ -133,7 +133,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 65,
+      "stars": 66,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -152,7 +152,7 @@
     {
       "name": "ComfyUI-Blip",
       "description": "A lightweight and high-speed ComfyUI custom node for generating image captions using BLIP models. Optimized for both GPU and CPU environments to deliver fast and efficient caption generation.",
-      "stars": 8,
+      "stars": 9,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -170,7 +170,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 114,
+      "stars": 118,
       "forks": 9,
       "language": "Python",
       "topics": [
@@ -264,8 +264,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 108,
-      "forks": 5,
+      "stars": 123,
+      "forks": 6,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -347,7 +347,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1420,
+      "stars": 1423,
       "forks": 63,
       "language": "Python",
       "topics": [
@@ -395,5 +395,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-20T06:01:03.001Z"
+  "lastUpdated": "2025-10-21T06:01:11.489Z"
 }
