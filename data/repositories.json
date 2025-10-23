@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-DeepSeek-OCR",
       "description": "A powerful OCR node for ComfyUI that integrates the DeepSeek-OCR model from Hugging Face.",
-      "stars": 0,
+      "stars": 3,
       "forks": 1,
       "language": null,
       "topics": [
@@ -152,7 +152,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 67,
+      "stars": 68,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -189,7 +189,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 120,
+      "stars": 122,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -242,7 +242,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 117,
+      "stars": 118,
       "forks": 10,
       "language": "Python",
       "topics": [
@@ -283,8 +283,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 140,
-      "forks": 7,
+      "stars": 143,
+      "forks": 8,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -366,7 +366,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1422,
+      "stars": 1425,
       "forks": 63,
       "language": "Python",
       "topics": [
@@ -414,5 +414,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-22T06:01:06.793Z"
+  "lastUpdated": "2025-10-23T06:00:58.678Z"
 }
