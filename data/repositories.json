@@ -5,7 +5,7 @@
       "description": "Powerful ComfyUI custom node built on the FlashVSR model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
       "stars": 1,
       "forks": 1,
-      "language": null,
+      "language": "Python",
       "topics": [
         "comfyui",
         "customnodes",
@@ -208,7 +208,7 @@
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
       "stars": 124,
-      "forks": 11,
+      "forks": 12,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -301,8 +301,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 167,
-      "forks": 10,
+      "stars": 169,
+      "forks": 11,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -367,7 +367,7 @@
     {
       "name": "ComfyUI-EdgeTTS",
       "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices. Ideal for enhancing user interactions, this node is easy to integrate and customize, making it perfect for various applications.",
-      "stars": 55,
+      "stars": 56,
       "forks": 7,
       "language": "Python",
       "topics": [
@@ -384,8 +384,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1432,
-      "forks": 64,
+      "stars": 1436,
+      "forks": 66,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -432,5 +432,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-25T06:01:02.842Z"
+  "lastUpdated": "2025-10-26T06:00:53.034Z"
 }
