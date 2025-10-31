@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 34,
+      "stars": 38,
       "forks": 2,
       "language": "Python",
       "topics": [
@@ -40,7 +40,7 @@
     {
       "name": "ComfyUI-VoxCPMTTS",
       "description": "A clean, efficient ComfyUI custom node for VoxCPM TTS (Text-to-Speech) functionality. This implementation provides high-quality speech generation and voice cloning capabilities using the VoxCPM model.",
-      "stars": 7,
+      "stars": 9,
       "forks": 1,
       "language": "Python",
       "topics": [
@@ -301,7 +301,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 204,
+      "stars": 209,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -384,7 +384,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1444,
+      "stars": 1447,
       "forks": 66,
       "language": "Python",
       "topics": [
@@ -432,5 +432,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-10-30T06:01:04.349Z"
+  "lastUpdated": "2025-10-31T06:00:45.164Z"
 }
