@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 48,
+      "stars": 52,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -29,7 +29,7 @@
       "has_pages": false,
       "pages_url": "",
       "category": "ai",
-      "featured": false,
+      "featured": true,
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     },
     {
@@ -221,7 +221,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 149,
+      "stars": 150,
       "forks": 12,
       "language": "Python",
       "topics": [
@@ -241,8 +241,8 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 79,
-      "forks": 2,
+      "stars": 80,
+      "forks": 3,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-LBM",
@@ -315,7 +315,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 258,
+      "stars": 264,
       "forks": 18,
       "language": "Python",
       "topics": [
@@ -398,8 +398,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1460,
-      "forks": 66,
+      "stars": 1461,
+      "forks": 68,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -446,5 +446,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-07T06:00:48.597Z"
+  "lastUpdated": "2025-11-08T06:00:51.904Z"
 }
