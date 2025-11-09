@@ -18,7 +18,7 @@
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
       "stars": 52,
-      "forks": 4,
+      "forks": 6,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -184,7 +184,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 70,
+      "stars": 71,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -221,8 +221,8 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 150,
-      "forks": 12,
+      "stars": 154,
+      "forks": 13,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -315,7 +315,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 264,
+      "stars": 270,
       "forks": 18,
       "language": "Python",
       "topics": [
@@ -398,7 +398,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1461,
+      "stars": 1465,
       "forks": 68,
       "language": "Python",
       "topics": [
@@ -446,5 +446,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-08T06:00:51.904Z"
+  "lastUpdated": "2025-11-09T06:00:48.365Z"
 }
