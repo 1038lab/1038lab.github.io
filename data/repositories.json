@@ -3,8 +3,8 @@
     {
       "name": "ComfyUI-API-Manager",
       "description": "LLM API Manager for ComfyUI",
-      "stars": 0,
-      "forks": 1,
+      "stars": 1,
+      "forks": 3,
       "language": null,
       "topics": [
         "api-key",
@@ -36,7 +36,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 54,
+      "stars": 55,
       "forks": 6,
       "language": "Python",
       "topics": [
@@ -93,7 +93,7 @@
     {
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
-      "stars": 40,
+      "stars": 41,
       "forks": 2,
       "language": "Python",
       "topics": [
@@ -260,7 +260,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 82,
+      "stars": 83,
       "forks": 3,
       "language": "Python",
       "topics": [],
@@ -334,8 +334,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 325,
-      "forks": 28,
+      "stars": 329,
+      "forks": 29,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -417,7 +417,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1482,
+      "stars": 1484,
       "forks": 68,
       "language": "Python",
       "topics": [
@@ -465,5 +465,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-14T06:00:58.842Z"
+  "lastUpdated": "2025-11-15T06:00:49.487Z"
 }
