@@ -35,8 +35,8 @@
     },
     {
       "name": "ComfyUI-FlashVSR",
-      "description": "Powerful ComfyUI custom node built on the FlashVSR model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 55,
+      "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
+      "stars": 56,
       "forks": 6,
       "language": "Python",
       "topics": [
@@ -94,7 +94,7 @@
       "name": "ComfyUI-FireRedTTS",
       "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
       "stars": 41,
-      "forks": 2,
+      "forks": 3,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -240,7 +240,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 158,
+      "stars": 161,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -334,7 +334,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 329,
+      "stars": 334,
       "forks": 29,
       "language": "Python",
       "topics": [
@@ -465,5 +465,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-15T06:00:49.487Z"
+  "lastUpdated": "2025-11-16T06:00:44.530Z"
 }
