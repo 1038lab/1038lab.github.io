@@ -36,7 +36,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 56,
+      "stars": 57,
       "forks": 6,
       "language": "Python",
       "topics": [
@@ -240,7 +240,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 161,
+      "stars": 162,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -293,7 +293,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 129,
+      "stars": 130,
       "forks": 10,
       "language": "Python",
       "topics": [
@@ -334,7 +334,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 334,
+      "stars": 340,
       "forks": 29,
       "language": "Python",
       "topics": [
@@ -417,7 +417,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1484,
+      "stars": 1485,
       "forks": 68,
       "language": "Python",
       "topics": [
@@ -465,5 +465,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-16T06:00:44.530Z"
+  "lastUpdated": "2025-11-17T06:01:05.662Z"
 }
