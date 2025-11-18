@@ -36,7 +36,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 57,
+      "stars": 59,
       "forks": 6,
       "language": "Python",
       "topics": [
@@ -54,7 +54,7 @@
     {
       "name": "ComfyUI-DeepSeek-OCR",
       "description": "A powerful OCR node for ComfyUI that integrates the DeepSeek-OCR model from Hugging Face.",
-      "stars": 9,
+      "stars": 10,
       "forks": 2,
       "language": null,
       "topics": [
@@ -334,8 +334,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 340,
-      "forks": 29,
+      "stars": 342,
+      "forks": 31,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -417,8 +417,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1485,
-      "forks": 68,
+      "stars": 1490,
+      "forks": 69,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -439,7 +439,7 @@
     {
       "name": "ComfyUI-OmniGen",
       "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
-      "stars": 294,
+      "stars": 295,
       "forks": 21,
       "language": "Python",
       "topics": [],
@@ -465,5 +465,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-17T06:01:05.662Z"
+  "lastUpdated": "2025-11-18T06:13:27.595Z"
 }
