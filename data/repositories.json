@@ -240,7 +240,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 167,
+      "stars": 166,
       "forks": 15,
       "language": "Python",
       "topics": [
@@ -334,8 +334,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 362,
-      "forks": 35,
+      "stars": 368,
+      "forks": 36,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -465,5 +465,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-11-27T06:00:54.444Z"
+  "lastUpdated": "2025-11-28T06:00:48.112Z"
 }
