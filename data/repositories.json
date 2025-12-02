@@ -1,6 +1,20 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-SteadyDancer",
+      "description": "ComfyUI custom nodes for SteadyDancer",
+      "stars": 0,
+      "forks": 1,
+      "language": null,
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-SteadyDancer",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-API-Manager",
       "description": "LLM API Manager for ComfyUI",
       "stars": 1,
@@ -240,7 +254,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 170,
+      "stars": 171,
       "forks": 15,
       "language": "Python",
       "topics": [
@@ -334,8 +348,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 381,
-      "forks": 36,
+      "stars": 385,
+      "forks": 37,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -416,8 +430,8 @@
     },
     {
       "name": "ComfyUI-RMBG",
-      "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2 and GroundingDINO.",
-      "stars": 1523,
+      "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
+      "stars": 1525,
       "forks": 68,
       "language": "Python",
       "topics": [
@@ -439,7 +453,7 @@
     {
       "name": "ComfyUI-OmniGen",
       "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
-      "stars": 296,
+      "stars": 297,
       "forks": 21,
       "language": "Python",
       "topics": [],
@@ -465,5 +479,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-12-01T06:01:03.811Z"
+  "lastUpdated": "2025-12-02T06:00:50.655Z"
 }
