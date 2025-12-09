@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-SteadyDancer",
       "description": "ComfyUI custom nodes for SteadyDancer",
-      "stars": 1,
+      "stars": 2,
       "forks": 1,
       "language": null,
       "topics": [],
@@ -218,7 +218,7 @@
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
       "stars": 73,
-      "forks": 3,
+      "forks": 4,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -254,8 +254,8 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 171,
-      "forks": 15,
+      "stars": 170,
+      "forks": 16,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -348,7 +348,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 419,
+      "stars": 423,
       "forks": 44,
       "language": "Python",
       "topics": [
@@ -431,8 +431,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1541,
-      "forks": 71,
+      "stars": 1545,
+      "forks": 72,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -479,5 +479,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-12-08T06:00:50.772Z"
+  "lastUpdated": "2025-12-09T06:01:04.819Z"
 }
