@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-SteadyDancer",
       "description": "ComfyUI custom nodes for SteadyDancer",
-      "stars": 2,
+      "stars": 3,
       "forks": 1,
       "language": null,
       "topics": [],
@@ -255,7 +255,7 @@
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
       "stars": 170,
-      "forks": 16,
+      "forks": 17,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -307,7 +307,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 135,
+      "stars": 136,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -348,7 +348,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 423,
+      "stars": 427,
       "forks": 44,
       "language": "Python",
       "topics": [
@@ -367,7 +367,7 @@
     {
       "name": "ComfyUI-SparkTTS",
       "description": "ComfyUI-SparkTTS is a custom ComfyUI node implementation of SparkTTS, an advanced text-to-speech system that harnesses the power of large language models (LLMs) to generate highly accurate and natural-sounding speech.",
-      "stars": 119,
+      "stars": 120,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -431,7 +431,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1545,
+      "stars": 1550,
       "forks": 72,
       "language": "Python",
       "topics": [
@@ -479,5 +479,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-12-09T06:01:04.819Z"
+  "lastUpdated": "2025-12-10T06:01:03.137Z"
 }
