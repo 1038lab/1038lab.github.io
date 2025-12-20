@@ -3,8 +3,8 @@
     {
       "name": "ComfyUI-NodeAlign",
       "description": "Lightweight alignment toolbar for ComfyUI graphs. Provides quick align, equal size, and distribution actions with optional keyboard shortcuts.",
-      "stars": 0,
-      "forks": 0,
+      "stars": 19,
+      "forks": 1,
       "language": "JavaScript",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-NodeAlign",
@@ -65,7 +65,7 @@
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
       "stars": 72,
-      "forks": 7,
+      "forks": 8,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -268,7 +268,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 176,
+      "stars": 178,
       "forks": 18,
       "language": "Python",
       "topics": [
@@ -362,8 +362,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 470,
-      "forks": 50,
+      "stars": 474,
+      "forks": 51,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -445,8 +445,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1585,
-      "forks": 75,
+      "stars": 1586,
+      "forks": 76,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -493,5 +493,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-12-19T06:14:19.219Z"
+  "lastUpdated": "2025-12-20T06:01:00.256Z"
 }
