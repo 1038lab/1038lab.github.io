@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-NodeAlign",
       "description": "Lightweight alignment toolbar for ComfyUI graphs. Provides quick align, equal size, and distribution actions with optional keyboard shortcuts.",
-      "stars": 23,
+      "stars": 24,
       "forks": 1,
       "language": "JavaScript",
       "topics": [],
@@ -268,7 +268,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 179,
+      "stars": 180,
       "forks": 18,
       "language": "Python",
       "topics": [
@@ -344,7 +344,7 @@
     {
       "name": "ComfyUI-MegaTTS",
       "description": "A ComfyUI custom node based on ByteDance MegaTTS3, enabling high-quality text-to-speech synthesis with voice cloning capabilities for both Chinese and English.",
-      "stars": 49,
+      "stars": 50,
       "forks": 5,
       "language": "Python",
       "topics": [
@@ -361,9 +361,9 @@
     },
     {
       "name": "ComfyUI-QwenVL",
-      "description": "ComfyUI-QwenVL custom node integrates the Qwen-VL series, including the latest Qwen3-VL models,  including Qwen2.5-VL and the latest Qwen3-VL, to enable advanced multimodal AI for text generation,  image understanding, and video analysis.",
-      "stars": 477,
-      "forks": 52,
+      "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
+      "stars": 487,
+      "forks": 55,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -445,7 +445,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1589,
+      "stars": 1590,
       "forks": 76,
       "language": "Python",
       "topics": [
@@ -493,5 +493,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2025-12-22T06:01:06.090Z"
+  "lastUpdated": "2025-12-23T06:15:02.112Z"
 }
