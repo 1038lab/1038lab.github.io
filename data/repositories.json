@@ -282,7 +282,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 192,
+      "stars": 194,
       "forks": 18,
       "language": "Python",
       "topics": [
@@ -317,7 +317,7 @@
       "name": "ComfyUI-ReduxFineTune",
       "description": "ComfyUI-ReduxFineTune is a custom node for ComfyUI that enables advanced style fine-tuning using the Flux Redux approach. It offers multiple unified fusion modes for precise and consistent control over style transfer, allowing users to fine-tune image styles with high flexibility and detail.",
       "stars": 66,
-      "forks": 3,
+      "forks": 4,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -376,8 +376,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 531,
-      "forks": 59,
+      "stars": 532,
+      "forks": 60,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -459,8 +459,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1614,
-      "forks": 81,
+      "stars": 1619,
+      "forks": 82,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -507,5 +507,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-01-02T06:00:59.817Z"
+  "lastUpdated": "2026-01-03T06:13:36.691Z"
 }
