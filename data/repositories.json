@@ -92,7 +92,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 78,
+      "stars": 79,
       "forks": 9,
       "language": "Python",
       "topics": [
@@ -259,7 +259,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 76,
+      "stars": 77,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -296,7 +296,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 201,
+      "stars": 203,
       "forks": 21,
       "language": "Python",
       "topics": [
@@ -390,7 +390,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 546,
+      "stars": 552,
       "forks": 61,
       "language": "Python",
       "topics": [
@@ -473,8 +473,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1641,
-      "forks": 83,
+      "stars": 1647,
+      "forks": 84,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -521,5 +521,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-01-09T06:00:45.587Z"
+  "lastUpdated": "2026-01-12T06:17:59.064Z"
 }
