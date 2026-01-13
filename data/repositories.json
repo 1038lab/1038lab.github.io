@@ -260,7 +260,7 @@
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
       "stars": 77,
-      "forks": 4,
+      "forks": 5,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -296,8 +296,8 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 203,
-      "forks": 21,
+      "stars": 204,
+      "forks": 22,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -390,8 +390,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 552,
-      "forks": 61,
+      "stars": 554,
+      "forks": 62,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -456,7 +456,7 @@
     {
       "name": "ComfyUI-EdgeTTS",
       "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices. Ideal for enhancing user interactions, this node is easy to integrate and customize, making it perfect for various applications.",
-      "stars": 59,
+      "stars": 60,
       "forks": 7,
       "language": "Python",
       "topics": [
@@ -473,8 +473,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1647,
-      "forks": 84,
+      "stars": 1649,
+      "forks": 86,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -510,7 +510,7 @@
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
       "stars": 61,
-      "forks": 10,
+      "forks": 11,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-WildPromptor",
@@ -521,5 +521,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-01-12T06:17:59.064Z"
+  "lastUpdated": "2026-01-13T06:00:59.030Z"
 }
