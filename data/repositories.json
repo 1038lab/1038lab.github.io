@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 2,
+      "stars": 4,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -17,8 +17,8 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 131,
-      "forks": 7,
+      "stars": 145,
+      "forks": 12,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-QwenTTS",
@@ -310,7 +310,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 215,
+      "stars": 216,
       "forks": 24,
       "language": "Python",
       "topics": [
@@ -363,7 +363,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 145,
+      "stars": 144,
       "forks": 14,
       "language": "Python",
       "topics": [
@@ -404,7 +404,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 618,
+      "stars": 619,
       "forks": 72,
       "language": "Python",
       "topics": [
@@ -523,7 +523,7 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 66,
+      "stars": 67,
       "forks": 11,
       "language": "Python",
       "topics": [],
@@ -535,5 +535,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-01-31T06:21:37.619Z"
+  "lastUpdated": "2026-02-01T06:32:49.356Z"
 }
