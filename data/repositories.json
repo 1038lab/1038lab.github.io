@@ -1,10 +1,24 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-Youtu-VL",
+      "description": "",
+      "stars": 1,
+      "forks": 1,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-Youtu-VL",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 12,
-      "forks": 2,
+      "stars": 20,
+      "forks": 3,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-QwenASR",
@@ -17,7 +31,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 153,
+      "stars": 157,
       "forks": 12,
       "language": "Python",
       "topics": [],
@@ -273,7 +287,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 79,
+      "stars": 80,
       "forks": 5,
       "language": "Python",
       "topics": [
@@ -311,7 +325,7 @@
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
       "stars": 217,
-      "forks": 24,
+      "forks": 23,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -404,7 +418,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 619,
+      "stars": 622,
       "forks": 72,
       "language": "Python",
       "topics": [
@@ -487,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1726,
+      "stars": 1727,
       "forks": 92,
       "language": "Python",
       "topics": [
@@ -535,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-02-02T06:45:18.561Z"
+  "lastUpdated": "2026-02-03T06:33:34.308Z"
 }
