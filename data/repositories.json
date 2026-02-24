@@ -31,8 +31,8 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 177,
-      "forks": 12,
+      "stars": 178,
+      "forks": 13,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-QwenTTS",
@@ -158,7 +158,7 @@
       "name": "ComfyUI-VoxCPMTTS",
       "description": "A clean, efficient ComfyUI custom node for VoxCPM TTS (Text-to-Speech) functionality. This implementation provides high-quality speech generation and voice cloning capabilities using the VoxCPM 1.5 model.",
       "stars": 35,
-      "forks": 2,
+      "forks": 3,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -325,7 +325,7 @@
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
       "stars": 226,
-      "forks": 24,
+      "forks": 25,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -344,7 +344,7 @@
     {
       "name": "ComfyUI-LBM",
       "description": "A ComfyUI custom node for Latent Bridge Matching (LBM), for fast image relighting processing.",
-      "stars": 88,
+      "stars": 89,
       "forks": 3,
       "language": "Python",
       "topics": [],
@@ -401,7 +401,7 @@
       "name": "ComfyUI-MegaTTS",
       "description": "A ComfyUI custom node based on ByteDance MegaTTS3, enabling high-quality text-to-speech synthesis with voice cloning capabilities for both Chinese and English.",
       "stars": 49,
-      "forks": 5,
+      "forks": 6,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -418,8 +418,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 659,
-      "forks": 78,
+      "stars": 662,
+      "forks": 79,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-02-23T06:48:40.632Z"
+  "lastUpdated": "2026-02-24T06:42:16.841Z"
 }
