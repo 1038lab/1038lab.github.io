@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-NodeAlign",
       "description": "Lightweight alignment toolbar for ComfyUI graphs. Provides quick align, equal size, and distribution actions with optional keyboard shortcuts.",
-      "stars": 35,
+      "stars": 36,
       "forks": 2,
       "language": "JavaScript",
       "topics": [],
@@ -324,7 +324,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 243,
+      "stars": 245,
       "forks": 27,
       "language": "Python",
       "topics": [
@@ -419,7 +419,7 @@
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
       "stars": 702,
-      "forks": 91,
+      "forks": 92,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1833,
+      "stars": 1835,
       "forks": 108,
       "language": "Python",
       "topics": [
@@ -524,7 +524,7 @@
       "name": "ComfyUI-OmniGen",
       "description": "ComfyUI-OmniGen - A ComfyUI custom node implementation of OmniGen, a powerful text-to-image generation and editing model.",
       "stars": 298,
-      "forks": 20,
+      "forks": 19,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-OmniGen",
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-03-23T06:53:48.613Z"
+  "lastUpdated": "2026-03-24T06:46:23.964Z"
 }
