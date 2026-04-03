@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 45,
+      "stars": 46,
       "forks": 9,
       "language": "Python",
       "topics": [],
@@ -31,7 +31,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 204,
+      "stars": 207,
       "forks": 15,
       "language": "Python",
       "topics": [],
@@ -419,7 +419,7 @@
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
       "stars": 715,
-      "forks": 96,
+      "forks": 97,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1860,
+      "stars": 1863,
       "forks": 109,
       "language": "Python",
       "topics": [
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-04-02T06:55:52.381Z"
+  "lastUpdated": "2026-04-03T06:52:51.755Z"
 }
