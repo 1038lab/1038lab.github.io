@@ -418,8 +418,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 720,
-      "forks": 102,
+      "stars": 722,
+      "forks": 104,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1879,
+      "stars": 1881,
       "forks": 109,
       "language": "Python",
       "topics": [
@@ -537,8 +537,8 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 90,
-      "forks": 11,
+      "stars": 92,
+      "forks": 12,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-WildPromptor",
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-04-11T06:43:40.522Z"
+  "lastUpdated": "2026-04-12T06:59:40.965Z"
 }
