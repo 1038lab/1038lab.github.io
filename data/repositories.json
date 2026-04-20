@@ -120,7 +120,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 98,
+      "stars": 99,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -157,7 +157,7 @@
     {
       "name": "ComfyUI-VoxCPMTTS",
       "description": "A clean, efficient ComfyUI custom node for VoxCPM TTS (Text-to-Speech) functionality. This implementation provides high-quality speech generation and voice cloning capabilities using the VoxCPM 1.5 model.",
-      "stars": 38,
+      "stars": 39,
       "forks": 2,
       "language": "Python",
       "topics": [
@@ -324,7 +324,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 255,
+      "stars": 258,
       "forks": 28,
       "language": "Python",
       "topics": [
@@ -358,7 +358,7 @@
     {
       "name": "ComfyUI-ReduxFineTune",
       "description": "ComfyUI-ReduxFineTune is a custom node for ComfyUI that enables advanced style fine-tuning using the Flux Redux approach. It offers multiple unified fusion modes for precise and consistent control over style transfer, allowing users to fine-tune image styles with high flexibility and detail.",
-      "stars": 70,
+      "stars": 71,
       "forks": 4,
       "language": "Python",
       "topics": [
@@ -418,7 +418,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 732,
+      "stars": 733,
       "forks": 104,
       "language": "Python",
       "topics": [
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1890,
+      "stars": 1893,
       "forks": 111,
       "language": "Python",
       "topics": [
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-04-19T07:02:33.191Z"
+  "lastUpdated": "2026-04-20T07:44:34.762Z"
 }
