@@ -31,7 +31,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 216,
+      "stars": 217,
       "forks": 15,
       "language": "Python",
       "topics": [],
@@ -120,7 +120,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 106,
+      "stars": 107,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -324,7 +324,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 268,
+      "stars": 270,
       "forks": 33,
       "language": "Python",
       "topics": [
@@ -418,7 +418,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 757,
+      "stars": 758,
       "forks": 114,
       "language": "Python",
       "topics": [
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1938,
+      "stars": 1941,
       "forks": 116,
       "language": "Python",
       "topics": [
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-05-12T08:14:33.903Z"
+  "lastUpdated": "2026-05-13T08:25:56.956Z"
 }
