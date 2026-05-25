@@ -287,7 +287,7 @@
     {
       "name": "ComfyUI-MiniMax-Remover",
       "description": "ComfyUI-MiniMax-Remover is a custom node for ComfyUI that enables fast and efficient object removal using minimax optimization. It works in two stages: first, it trains a remover with a simplified DiT model; then it distills a robust version using CFG guidance and fewer inference steps.",
-      "stars": 84,
+      "stars": 85,
       "forks": 5,
       "language": "Python",
       "topics": [
@@ -418,7 +418,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 769,
+      "stars": 771,
       "forks": 119,
       "language": "Python",
       "topics": [
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1962,
+      "stars": 1963,
       "forks": 118,
       "language": "Python",
       "topics": [
@@ -537,7 +537,7 @@
     {
       "name": "ComfyUI-WildPromptor",
       "description": "WildPromptor simplifies prompt creation, organization, and customization in ComfyUI, turning chaotic workflows into an efficient, intuitive process.",
-      "stars": 95,
+      "stars": 97,
       "forks": 13,
       "language": "Python",
       "topics": [],
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-05-24T08:09:47.412Z"
+  "lastUpdated": "2026-05-25T09:40:38.610Z"
 }
