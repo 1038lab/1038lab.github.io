@@ -120,7 +120,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 108,
+      "stars": 109,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-05-28T09:36:28.131Z"
+  "lastUpdated": "2026-05-29T08:58:09.397Z"
 }
