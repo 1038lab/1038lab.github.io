@@ -120,7 +120,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 109,
+      "stars": 110,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -138,7 +138,7 @@
     {
       "name": "ComfyUI-DeepSeek-OCR",
       "description": "A powerful OCR node for ComfyUI that integrates the DeepSeek-OCR model from Hugging Face.",
-      "stars": 18,
+      "stars": 17,
       "forks": 3,
       "language": null,
       "topics": [
@@ -418,7 +418,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 772,
+      "stars": 773,
       "forks": 118,
       "language": "Python",
       "topics": [
@@ -501,7 +501,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 1966,
+      "stars": 1967,
       "forks": 118,
       "language": "Python",
       "topics": [
@@ -549,5 +549,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-05-29T08:58:09.397Z"
+  "lastUpdated": "2026-05-30T08:10:33.288Z"
 }
