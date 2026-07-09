@@ -1,6 +1,34 @@
 {
   "repositories": [
     {
+      "name": "Agnes-AI",
+      "description": "A unified Python CLI for Agnes AI models — text generation, image understanding, image generation, and video generation, all with zero external dependencies.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/Agnes-AI",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
+      "name": "ComfyUI-Agnes-AI",
+      "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
+      "stars": 0,
+      "forks": 1,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-Agnes-AI",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-Youtu-VL",
       "description": "",
       "stars": 13,
@@ -418,7 +446,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 802,
+      "stars": 801,
       "forks": 127,
       "language": "Python",
       "topics": [
@@ -501,7 +529,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2011,
+      "stars": 2013,
       "forks": 126,
       "language": "Python",
       "topics": [
@@ -549,5 +577,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-07-08T08:00:46.653Z"
+  "lastUpdated": "2026-07-09T09:01:40.514Z"
 }
