@@ -3,7 +3,7 @@
     {
       "name": "Agnes-AI",
       "description": "A unified Python CLI for Agnes AI models — text generation, image understanding, image generation, and video generation, all with zero external dependencies.",
-      "stars": 1,
+      "stars": 2,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -17,8 +17,8 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 7,
-      "forks": 1,
+      "stars": 11,
+      "forks": 2,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-Agnes-AI",
@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 225,
+      "stars": 226,
       "forks": 15,
       "language": "Python",
       "topics": [],
@@ -352,7 +352,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 288,
+      "stars": 289,
       "forks": 33,
       "language": "Python",
       "topics": [
@@ -446,7 +446,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 804,
+      "stars": 805,
       "forks": 126,
       "language": "Python",
       "topics": [
@@ -577,5 +577,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-07-11T07:26:51.773Z"
+  "lastUpdated": "2026-07-12T07:51:19.251Z"
 }
