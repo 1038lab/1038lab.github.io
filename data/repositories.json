@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 12,
+      "stars": 14,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 226,
+      "stars": 227,
       "forks": 15,
       "language": "Python",
       "topics": [],
@@ -334,7 +334,7 @@
     {
       "name": "ComfyUI-Blip",
       "description": "A lightweight and high-speed ComfyUI custom node for generating image captions using BLIP models. Optimized for both GPU and CPU environments to deliver fast and efficient caption generation.",
-      "stars": 11,
+      "stars": 12,
       "forks": 2,
       "language": "Python",
       "topics": [
@@ -446,8 +446,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 808,
-      "forks": 126,
+      "stars": 810,
+      "forks": 127,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -577,5 +577,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-07-13T08:36:56.491Z"
+  "lastUpdated": "2026-07-14T07:29:53.829Z"
 }
