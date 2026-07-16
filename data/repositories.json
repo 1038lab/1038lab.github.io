@@ -4,7 +4,7 @@
       "name": "Agnes-AI",
       "description": "A unified Python CLI for Agnes AI models — text generation, image understanding, image generation, and video generation, all with zero external dependencies.",
       "stars": 2,
-      "forks": 1,
+      "forks": 2,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/Agnes-AI",
@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 15,
+      "stars": 16,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -148,7 +148,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 114,
+      "stars": 115,
       "forks": 11,
       "language": "Python",
       "topics": [
@@ -405,7 +405,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 149,
+      "stars": 150,
       "forks": 14,
       "language": "Python",
       "topics": [
@@ -446,7 +446,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 813,
+      "stars": 814,
       "forks": 128,
       "language": "Python",
       "topics": [
@@ -529,7 +529,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2019,
+      "stars": 2020,
       "forks": 126,
       "language": "Python",
       "topics": [
@@ -577,5 +577,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-07-15T07:43:31.628Z"
+  "lastUpdated": "2026-07-16T07:48:24.476Z"
 }
