@@ -1,6 +1,20 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-MiniMax-H3-Promptor",
+      "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-MiniMax-H3-Promptor",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "Agnes-AI",
       "description": "A unified Python CLI for Agnes AI models — text generation, image understanding, image generation, and video generation, all with zero external dependencies.",
       "stars": 4,
@@ -17,7 +31,7 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 24,
+      "stars": 25,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -60,7 +74,7 @@
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
       "stars": 235,
-      "forks": 18,
+      "forks": 17,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-QwenTTS",
@@ -577,5 +591,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-08-04T08:10:23.856Z"
+  "lastUpdated": "2026-08-05T08:09:01.133Z"
 }
