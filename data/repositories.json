@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 137,
+      "stars": 140,
       "forks": 19,
       "language": "Python",
       "topics": [],
@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 66,
+      "stars": 67,
       "forks": 15,
       "language": "Python",
       "topics": [],
@@ -73,7 +73,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 248,
+      "stars": 249,
       "forks": 18,
       "language": "Python",
       "topics": [],
@@ -162,7 +162,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 122,
+      "stars": 123,
       "forks": 10,
       "language": "Python",
       "topics": [
@@ -367,7 +367,7 @@
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
       "stars": 302,
-      "forks": 34,
+      "forks": 35,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -460,8 +460,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL and the latest Qwen3-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 838,
-      "forks": 133,
+      "stars": 839,
+      "forks": 132,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -543,8 +543,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2073,
-      "forks": 131,
+      "stars": 2075,
+      "forks": 132,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -591,5 +591,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-08-17T06:23:45.391Z"
+  "lastUpdated": "2026-08-18T06:18:14.203Z"
 }
