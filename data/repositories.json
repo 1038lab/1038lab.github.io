@@ -3,8 +3,8 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 140,
-      "forks": 19,
+      "stars": 144,
+      "forks": 20,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-MiniMax-H3-Promptor",
@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 67,
+      "stars": 68,
       "forks": 15,
       "language": "Python",
       "topics": [],
@@ -162,7 +162,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 123,
+      "stars": 124,
       "forks": 10,
       "language": "Python",
       "topics": [
@@ -543,7 +543,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2075,
+      "stars": 2077,
       "forks": 132,
       "language": "Python",
       "topics": [
@@ -591,5 +591,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-08-18T06:18:14.203Z"
+  "lastUpdated": "2026-08-19T06:19:00.069Z"
 }
