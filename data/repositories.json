@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 180,
+      "stars": 181,
       "forks": 26,
       "language": "Python",
       "topics": [],
@@ -460,8 +460,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 848,
-      "forks": 132,
+      "stars": 849,
+      "forks": 133,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -591,5 +591,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-08-23T06:17:00.910Z"
+  "lastUpdated": "2026-08-24T06:27:59.842Z"
 }
