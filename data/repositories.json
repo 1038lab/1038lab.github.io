@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 200,
+      "stars": 203,
       "forks": 30,
       "language": "Python",
       "topics": [],
@@ -18,7 +18,7 @@
       "name": "Agnes-AI",
       "description": "A unified Python CLI for Agnes AI models — text generation, image understanding, image generation, and video generation, all with zero external dependencies.",
       "stars": 4,
-      "forks": 2,
+      "forks": 3,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/Agnes-AI",
@@ -101,7 +101,7 @@
     {
       "name": "ComfyUI-NodeAlign",
       "description": "Lightweight alignment toolbar for ComfyUI graphs. Provides quick align, equal size, and distribution actions with optional keyboard shortcuts.",
-      "stars": 39,
+      "stars": 40,
       "forks": 1,
       "language": "JavaScript",
       "topics": [],
@@ -366,7 +366,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 307,
+      "stars": 308,
       "forks": 33,
       "language": "Python",
       "topics": [
@@ -460,8 +460,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 864,
-      "forks": 140,
+      "stars": 865,
+      "forks": 141,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -543,7 +543,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2088,
+      "stars": 2090,
       "forks": 133,
       "language": "Python",
       "topics": [
@@ -591,5 +591,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-08-30T10:44:21.080Z"
+  "lastUpdated": "2026-08-31T11:53:17.154Z"
 }
