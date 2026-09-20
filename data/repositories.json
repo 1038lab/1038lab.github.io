@@ -1,9 +1,23 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-Hy-MT2",
+      "description": "Lightweight ComfyUI translation node for Tencent Hy-MT2 models powered by GGUF (llama.cpp). Fast, memory-efficient, and cleanly managed.",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-Hy-MT2",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 228,
+      "stars": 229,
       "forks": 29,
       "language": "Python",
       "topics": [],
@@ -31,8 +45,8 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 35,
-      "forks": 8,
+      "stars": 36,
+      "forks": 9,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-Agnes-AI",
@@ -59,7 +73,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 75,
+      "stars": 76,
       "forks": 17,
       "language": "Python",
       "topics": [],
@@ -73,7 +87,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 254,
+      "stars": 255,
       "forks": 18,
       "language": "Python",
       "topics": [],
@@ -218,7 +232,7 @@
     },
     {
       "name": "ComfyUI-FireRedTTS",
-      "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
+      "description": "A ComfyUI integration for FireRedTTS��2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
       "stars": 43,
       "forks": 5,
       "language": "Python",
@@ -419,7 +433,7 @@
     {
       "name": "ComfyUI-MiniCPM",
       "description": "A custom ComfyUI node for MiniCPM vision-language models, supporting v4, v4.5, and v4 GGUF formats, enabling high-quality image captioning and visual analysis.",
-      "stars": 155,
+      "stars": 156,
       "forks": 14,
       "language": "Python",
       "topics": [
@@ -460,8 +474,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 891,
-      "forks": 144,
+      "stars": 890,
+      "forks": 143,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -543,7 +557,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2113,
+      "stars": 2117,
       "forks": 135,
       "language": "Python",
       "topics": [
@@ -591,5 +605,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-09-19T09:46:18.009Z"
+  "lastUpdated": "2026-09-20T10:08:25.935Z"
 }
