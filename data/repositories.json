@@ -17,8 +17,8 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 233,
-      "forks": 29,
+      "stars": 236,
+      "forks": 31,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-MiniMax-H3-Promptor",
@@ -87,7 +87,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 256,
+      "stars": 257,
       "forks": 18,
       "language": "Python",
       "topics": [],
@@ -176,7 +176,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 132,
+      "stars": 133,
       "forks": 12,
       "language": "Python",
       "topics": [
@@ -232,7 +232,7 @@
     },
     {
       "name": "ComfyUI-FireRedTTS",
-      "description": "A ComfyUI integration for FireRedTTS‑2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
+      "description": "A ComfyUI integration for FireRedTTS���2, a real-time multi-speaker TTS system enabling high-quality, emotionally expressive dialogue and monologue synthesis. Leveraging a streaming architecture and context-aware prosody modeling, it supports natural speaker turns and stable long-form generation, ideal for interactive chat and podcast applications.",
       "stars": 43,
       "forks": 5,
       "language": "Python",
@@ -380,8 +380,8 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 320,
-      "forks": 34,
+      "stars": 322,
+      "forks": 35,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -557,7 +557,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2122,
+      "stars": 2125,
       "forks": 135,
       "language": "Python",
       "topics": [
@@ -605,5 +605,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-09-24T10:32:31.276Z"
+  "lastUpdated": "2026-09-26T10:19:21.308Z"
 }
