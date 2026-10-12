@@ -45,7 +45,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 244,
+      "stars": 245,
       "forks": 33,
       "language": "Python",
       "topics": [],
@@ -73,7 +73,7 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 40,
+      "stars": 41,
       "forks": 9,
       "language": "Python",
       "topics": [],
@@ -115,7 +115,7 @@
     {
       "name": "ComfyUI-QwenTTS",
       "description": "ComfyUI custom nodes for speech, voice cloning, and voice design based on Qwen3-TTS models",
-      "stars": 258,
+      "stars": 261,
       "forks": 18,
       "language": "Python",
       "topics": [],
@@ -408,7 +408,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 324,
+      "stars": 325,
       "forks": 35,
       "language": "Python",
       "topics": [
@@ -502,7 +502,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 909,
+      "stars": 910,
       "forks": 146,
       "language": "Python",
       "topics": [
@@ -633,5 +633,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-10-11T11:38:23.517Z"
+  "lastUpdated": "2026-10-12T13:34:47.484Z"
 }
