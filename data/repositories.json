@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-Depth-Anything-3",
       "description": "An all-in-one, ultra-fast ComfyUI custom node for **Depth Anything 3 (DA3)** ",
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -45,7 +45,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 245,
+      "stars": 246,
       "forks": 34,
       "language": "Python",
       "topics": [],
@@ -101,7 +101,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 82,
+      "stars": 83,
       "forks": 19,
       "language": "Python",
       "topics": [],
@@ -204,7 +204,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 136,
+      "stars": 137,
       "forks": 12,
       "language": "Python",
       "topics": [
@@ -222,7 +222,7 @@
     {
       "name": "ComfyUI-DeepSeek-OCR",
       "description": "A powerful OCR node for ComfyUI that integrates the DeepSeek-OCR model from Hugging Face.",
-      "stars": 16,
+      "stars": 17,
       "forks": 3,
       "language": null,
       "topics": [
@@ -502,8 +502,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 916,
-      "forks": 146,
+      "stars": 917,
+      "forks": 147,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -569,7 +569,7 @@
       "name": "ComfyUI-EdgeTTS",
       "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices. Ideal for enhancing user interactions, this node is easy to integrate and customize, making it perfect for various applications.",
       "stars": 79,
-      "forks": 9,
+      "forks": 10,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -585,7 +585,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, INSPYRENET, BEN, BEN2, BiRefNet, SDMatte, SAM, SAM2, SAM3 and GroundingDINO.",
-      "stars": 2180,
+      "stars": 2181,
       "forks": 137,
       "language": "Python",
       "topics": [
@@ -633,5 +633,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-10-14T10:39:25.101Z"
+  "lastUpdated": "2026-10-15T10:22:47.695Z"
 }
