@@ -31,7 +31,7 @@
     {
       "name": "ComfyUI-Depth-Anything-3",
       "description": "An all-in-one, ultra-fast ComfyUI custom node for **Depth Anything 3 (DA3)** ",
-      "stars": 10,
+      "stars": 11,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 255,
+      "stars": 257,
       "forks": 34,
       "language": "Python",
       "topics": [],
@@ -218,7 +218,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 141,
+      "stars": 142,
       "forks": 12,
       "language": "Python",
       "topics": [
@@ -329,7 +329,7 @@
     {
       "name": "ComfyUI-Mosaic",
       "description": "",
-      "stars": 5,
+      "stars": 6,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -599,8 +599,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
-      "stars": 2202,
-      "forks": 139,
+      "stars": 2203,
+      "forks": 138,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -647,5 +647,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-10-25T10:11:46.527Z"
+  "lastUpdated": "2026-10-26T11:34:48.684Z"
 }
