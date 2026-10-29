@@ -1,6 +1,20 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-Open-H3-Regenerate-2K",
+      "description": "A dedicated ComfyUI custom node engineered for NVIDIA's Open-H3-Regenerate-2K video super-resolution pipeline on MiniMax H3",
+      "stars": 0,
+      "forks": 0,
+      "language": "Python",
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-Open-H3-Regenerate-2K",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-M2MR",
       "description": "ComfyUI nodes that drive a Mixamo-rigged character with the motion of a person in a video (or a single photo), and give you back a **white-model animation** you can preview inside ComfyUI or feed to a video model — plus a **`.glb`** for Blender.",
       "stars": 1,
@@ -59,7 +73,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 258,
+      "stars": 259,
       "forks": 34,
       "language": "Python",
       "topics": [],
@@ -218,7 +232,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 157,
+      "stars": 160,
       "forks": 13,
       "language": "Python",
       "topics": [
@@ -422,7 +436,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 330,
+      "stars": 331,
       "forks": 38,
       "language": "Python",
       "topics": [
@@ -516,7 +530,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 922,
+      "stars": 921,
       "forks": 147,
       "language": "Python",
       "topics": [
@@ -599,8 +613,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
-      "stars": 2207,
-      "forks": 138,
+      "stars": 2208,
+      "forks": 139,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -647,5 +661,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-10-28T11:41:07.855Z"
+  "lastUpdated": "2026-10-29T11:49:16.805Z"
 }
