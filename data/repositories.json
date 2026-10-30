@@ -3,8 +3,8 @@
     {
       "name": "ComfyUI-Open-H3-Regenerate-2K",
       "description": "A dedicated ComfyUI custom node engineered for NVIDIA's Open-H3-Regenerate-2K video super-resolution pipeline on MiniMax H3",
-      "stars": 0,
-      "forks": 0,
+      "stars": 4,
+      "forks": 1,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-Open-H3-Regenerate-2K",
@@ -232,8 +232,8 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 160,
-      "forks": 13,
+      "stars": 163,
+      "forks": 14,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -530,7 +530,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 921,
+      "stars": 922,
       "forks": 147,
       "language": "Python",
       "topics": [
@@ -613,8 +613,8 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
-      "stars": 2208,
-      "forks": 139,
+      "stars": 2210,
+      "forks": 141,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -661,5 +661,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-10-29T11:49:16.805Z"
+  "lastUpdated": "2026-10-30T11:42:10.719Z"
 }
