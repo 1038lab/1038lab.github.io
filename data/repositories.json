@@ -436,8 +436,8 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 331,
-      "forks": 38,
+      "stars": 332,
+      "forks": 39,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -661,5 +661,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-10-30T11:42:10.719Z"
+  "lastUpdated": "2026-10-31T11:15:42.619Z"
 }
