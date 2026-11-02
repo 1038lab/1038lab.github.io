@@ -1,9 +1,23 @@
 {
   "repositories": [
     {
+      "name": "ComfyUI-Character-Studio",
+      "description": "Character Studio adds a compact `Character Recipe` node and a searchable ComfyUI sidebar. The sidebar has Portrait / Hair, Outfit, and Pose / Depth tabs. Every image is optional, and pose and depth may both be selected.",
+      "stars": 0,
+      "forks": 0,
+      "language": null,
+      "topics": [],
+      "url": "https://github.com/1038lab/ComfyUI-Character-Studio",
+      "has_pages": false,
+      "pages_url": "",
+      "category": "ai",
+      "featured": false,
+      "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+    },
+    {
       "name": "ComfyUI-Open-H3-Regenerate-2K",
       "description": "A dedicated ComfyUI custom node engineered for NVIDIA's Open-H3-Regenerate-2K video super-resolution pipeline on MiniMax H3",
-      "stars": 5,
+      "stars": 6,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -45,7 +59,7 @@
     {
       "name": "ComfyUI-Depth-Anything-3",
       "description": "An all-in-one, ultra-fast ComfyUI custom node for **Depth Anything 3 (DA3)** ",
-      "stars": 11,
+      "stars": 12,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -73,8 +87,8 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 260,
-      "forks": 34,
+      "stars": 262,
+      "forks": 35,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-MiniMax-H3-Promptor",
@@ -232,7 +246,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 164,
+      "stars": 165,
       "forks": 14,
       "language": "Python",
       "topics": [
@@ -530,7 +544,7 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 924,
+      "stars": 925,
       "forks": 147,
       "language": "Python",
       "topics": [
@@ -597,7 +611,7 @@
       "name": "ComfyUI-EdgeTTS",
       "description": "ComfyUI-EdgeTTS is a powerful text-to-speech node for ComfyUI, leveraging Microsoft's Edge TTS capabilities. It enables seamless conversion of text into natural-sounding speech, supporting multiple languages and voices. Ideal for enhancing user interactions, this node is easy to integrate and customize, making it perfect for various applications.",
       "stars": 81,
-      "forks": 11,
+      "forks": 10,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -613,7 +627,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
-      "stars": 2211,
+      "stars": 2215,
       "forks": 141,
       "language": "Python",
       "topics": [
@@ -661,5 +675,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-11-01T12:04:24.627Z"
+  "lastUpdated": "2026-11-02T13:53:35.251Z"
 }
