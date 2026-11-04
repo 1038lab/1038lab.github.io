@@ -45,7 +45,7 @@
     {
       "name": "ComfyUI-Lotus-2",
       "description": "A fast, standalone ComfyUI custom node for Lotus & Lotus 2 (Generative Depth and Surface Normal estimation)",
-      "stars": 6,
+      "stars": 5,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -59,7 +59,7 @@
     {
       "name": "ComfyUI-Depth-Anything-3",
       "description": "An all-in-one, ultra-fast ComfyUI custom node for **Depth Anything 3 (DA3)** ",
-      "stars": 12,
+      "stars": 11,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -73,7 +73,7 @@
     {
       "name": "ComfyUI-Hy-MT2",
       "description": "Lightweight ComfyUI translation node for Tencent Hy-MT2 models powered by GGUF (llama.cpp). Fast, memory-efficient, and cleanly managed.",
-      "stars": 2,
+      "stars": 1,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -87,7 +87,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 263,
+      "stars": 262,
       "forks": 35,
       "language": "Python",
       "topics": [],
@@ -115,7 +115,7 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 42,
+      "stars": 41,
       "forks": 9,
       "language": "Python",
       "topics": [],
@@ -143,7 +143,7 @@
     {
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
-      "stars": 86,
+      "stars": 85,
       "forks": 19,
       "language": "Python",
       "topics": [],
@@ -544,8 +544,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 924,
-      "forks": 147,
+      "stars": 923,
+      "forks": 148,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -628,7 +628,7 @@
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
       "stars": 2218,
-      "forks": 141,
+      "forks": 142,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -675,5 +675,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-11-03T13:01:30.129Z"
+  "lastUpdated": "2026-11-04T13:18:11.476Z"
 }
