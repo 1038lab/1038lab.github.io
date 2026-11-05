@@ -3,7 +3,7 @@
     {
       "name": "ComfyUI-Character-Studio",
       "description": "Character Studio adds a compact `Character Recipe` node and a searchable ComfyUI sidebar. The sidebar has Portrait / Hair, Outfit, and Pose / Depth tabs. Every image is optional, and pose and depth may both be selected.",
-      "stars": 0,
+      "stars": 1,
       "forks": 0,
       "language": null,
       "topics": [],
@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-Open-H3-Regenerate-2K",
       "description": "A dedicated ComfyUI custom node engineered for NVIDIA's Open-H3-Regenerate-2K video super-resolution pipeline on MiniMax H3",
-      "stars": 6,
+      "stars": 7,
       "forks": 1,
       "language": "Python",
       "topics": [],
@@ -88,7 +88,7 @@
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
       "stars": 262,
-      "forks": 35,
+      "forks": 37,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-MiniMax-H3-Promptor",
@@ -246,7 +246,7 @@
     {
       "name": "ComfyUI-FlashVSR",
       "description": "Powerful ComfyUI custom node built on the FlashVSR V1.1 model, facilitating real-time diffusion-based video super-resolution for streaming applications.",
-      "stars": 165,
+      "stars": 167,
       "forks": 14,
       "language": "Python",
       "topics": [
@@ -450,7 +450,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 332,
+      "stars": 333,
       "forks": 39,
       "language": "Python",
       "topics": [
@@ -544,8 +544,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 923,
-      "forks": 148,
+      "stars": 924,
+      "forks": 149,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -675,5 +675,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-11-04T13:18:11.476Z"
+  "lastUpdated": "2026-11-05T13:30:54.280Z"
 }
