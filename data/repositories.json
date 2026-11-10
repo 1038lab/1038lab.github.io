@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-Open-H3-Regenerate-2K",
       "description": "A dedicated ComfyUI custom node engineered for NVIDIA's Open-H3-Regenerate-2K video super-resolution pipeline on MiniMax H3",
-      "stars": 8,
+      "stars": 9,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -87,7 +87,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 265,
+      "stars": 267,
       "forks": 37,
       "language": "Python",
       "topics": [],
@@ -115,7 +115,7 @@
     {
       "name": "ComfyUI-Agnes-AI",
       "description": "ComfyUI custom nodes for the Agnes AI API — a free, cloud-based AI generation platform. Generate images, create videos, enhance prompts, and analyze visuals — all without a local GPU. Zero extra Python dependencies.",
-      "stars": 41,
+      "stars": 42,
       "forks": 9,
       "language": "Python",
       "topics": [],
@@ -450,7 +450,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 334,
+      "stars": 335,
       "forks": 39,
       "language": "Python",
       "topics": [
@@ -627,7 +627,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
-      "stars": 2227,
+      "stars": 2226,
       "forks": 142,
       "language": "Python",
       "topics": [
@@ -675,5 +675,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-11-09T14:24:36.411Z"
+  "lastUpdated": "2026-11-10T13:48:11.553Z"
 }
