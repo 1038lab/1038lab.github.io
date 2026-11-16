@@ -17,7 +17,7 @@
     {
       "name": "ComfyUI-Open-H3-Regenerate-2K",
       "description": "A dedicated ComfyUI custom node engineered for NVIDIA's Open-H3-Regenerate-2K video super-resolution pipeline on MiniMax H3",
-      "stars": 11,
+      "stars": 13,
       "forks": 2,
       "language": "Python",
       "topics": [],
@@ -87,7 +87,7 @@
     {
       "name": "ComfyUI-MiniMax-H3-Promptor",
       "description": "A powerful, ComfyUI Custom node automation suite for generating cinema-production-grade prompts explicitly formatted for the **MiniMax H3 Video Generation System**.",
-      "stars": 271,
+      "stars": 272,
       "forks": 37,
       "language": "Python",
       "topics": [],
@@ -450,7 +450,7 @@
     {
       "name": "ComfyUI-JoyCaption",
       "description": "Joy Caption is a ComfyUI node using the LLaVA model to generate stylized image captions, supporting batch processing and GGUF models.",
-      "stars": 337,
+      "stars": 336,
       "forks": 39,
       "language": "Python",
       "topics": [
@@ -544,8 +544,8 @@
     {
       "name": "ComfyUI-QwenVL",
       "description": "ComfyUI-QwenVL custom node: Integrates the Qwen-VL series, including Qwen2.5-VL, Qwen3-VL, Qwen3.5-VL, Qwen3.6-VL (MoE), and Qwen3.8-VL, with GGUF support for advanced multimodal AI in text generation, image understanding, and video analysis.",
-      "stars": 929,
-      "forks": 151,
+      "stars": 930,
+      "forks": 152,
       "language": "Python",
       "topics": [
         "comfyui",
@@ -675,5 +675,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-11-15T12:58:53.094Z"
+  "lastUpdated": "2026-11-16T14:02:07.701Z"
 }
