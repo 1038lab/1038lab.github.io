@@ -144,7 +144,7 @@
       "name": "ComfyUI-QwenASR",
       "description": "A lightweight ComfyUI custom node pack for Qwen3-ASR, providing simple speech‑to‑text workflows with local model caching and optional timestamp output. Supports Qwen/Qwen3‑ASR‑1.7B and 0.6B, with HuggingFace/ModelScope download options and clean integration for ComfyUI pipelines.",
       "stars": 89,
-      "forks": 19,
+      "forks": 20,
       "language": "Python",
       "topics": [],
       "url": "https://github.com/1038lab/ComfyUI-QwenASR",
@@ -627,7 +627,7 @@
     {
       "name": "ComfyUI-RMBG",
       "description": "A ComfyUI custom node designed for advanced image background removal and object, face, clothes, and fashion segmentation, utilizing multiple models including RMBG-2.0, VRMBG-3.0, FeyNoBg, Finegrain Box Segmenter, INSPYRENET, BEN, BEN2, BiRefNet, Lucida, SDMatte, SAM, SAM2, SAM3, Florence-2, YOLOv8/YOLO11, Big-Lama, and GroundingDINO.",
-      "stars": 2240,
+      "stars": 2243,
       "forks": 142,
       "language": "Python",
       "topics": [
@@ -675,5 +675,5 @@
       "image": "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ],
-  "lastUpdated": "2026-11-21T13:44:22.783Z"
+  "lastUpdated": "2026-11-22T13:38:18.323Z"
 }
